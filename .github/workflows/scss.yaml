@@ -23,7 +23,7 @@ jobs:
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./style.scss
-          destination: /dist/style.css
+          destination: /dist/css/style.css
 
       - name: Upload Complied CSS
         uses: actions/upload-artifact@v1.0.0
