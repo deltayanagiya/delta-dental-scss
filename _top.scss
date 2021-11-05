@@ -1,7 +1,6 @@
 /*-----------------------------------------------------------
 Top
 -----------------------------------------------------------*/
-
 /*------------
 Header
 --------------*/
@@ -14,7 +13,7 @@ Header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .h-logo {
@@ -23,25 +22,24 @@ Header
   margin-right: 15px;
 }
 
-
 /*------------
 G-navi
 --------------*/
 .pc-navi {
-  >ul {
+  > ul {
     font-family: $font01;
     display: flex;
     align-items: center;
 
-    >li {
+    > li {
       display: flex;
       align-items: center;
       white-space: nowrap;
 
-      >a {
+      > a {
         display: inline-block;
         cursor: pointer;
-        transition: .5s;
+        transition: 0.5s;
         position: relative;
         padding: 0 15px;
         overflow: hidden;
@@ -53,7 +51,7 @@ G-navi
           position: absolute;
           left: 50%;
           bottom: 0;
-          transition: .5s;
+          transition: 0.5s;
           transform: translate(-50%, 5px);
         }
 
@@ -94,7 +92,7 @@ G-navi
       font-family: $font02;
       font-size: 32px;
       line-height: 1.3;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       margin-bottom: 20px;
     }
 
@@ -135,7 +133,7 @@ G-navi
       line-height: 1;
       text-align: center;
       padding: 25px;
-      transition: .3s;
+      transition: 0.3s;
       position: relative;
       z-index: 0;
 
@@ -152,7 +150,7 @@ G-navi
       }
 
       &:hover {
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
@@ -160,13 +158,13 @@ G-navi
 
 .overlay {
   pointer-events: none;
-  background: rgba(#000, .5);
+  background: rgba(#000, 0.5);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0;
   z-index: 105;
 
@@ -197,7 +195,7 @@ G-navi
     position: relative;
     transition: 0.5s;
 
-    &+.item {
+    & + .item {
       margin-top: 10px;
     }
 
@@ -266,7 +264,7 @@ G-navi
 
     &::before {
       content: "";
-      background: rgba(#fff, .1);
+      background: rgba(#fff, 0.1);
       width: 100%;
       height: 100%;
       position: absolute;
@@ -274,7 +272,7 @@ G-navi
       bottom: 0;
       transform: translateZ(0) scaleX(0);
       transform-origin: right top;
-      transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       z-index: -1;
     }
 
@@ -309,7 +307,7 @@ Hero01
     height: 100%;
     width: 100%;
     overflow: hidden;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     div {
       width: 100%;
@@ -364,7 +362,6 @@ Hero01
       font-size: 20px;
     }
   }
-
 }
 
 /*------------
@@ -376,7 +373,7 @@ Hero02
   justify-content: center;
 
   &::before {
-    background: #F1F1F1;
+    background: #f1f1f1;
     content: "";
     display: block;
     height: 100vh;
@@ -431,14 +428,13 @@ Hero02
       font-family: $font02;
       font-size: 65px;
       line-height: 1.2;
-      letter-spacing: .15em;
+      letter-spacing: 0.15em;
       position: absolute;
       top: -100px;
       left: -35px;
       z-index: -1;
     }
   }
-
 }
 
 /*------------
@@ -449,7 +445,7 @@ Hero03
     height: 100%;
     width: 100%;
     overflow: hidden;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     div {
       width: 100%;
@@ -504,7 +500,6 @@ Hero03
       font-size: 20px;
     }
   }
-
 }
 
 .slide-start.l {
@@ -520,7 +515,6 @@ Hero03
 }
 
 @media all and (-ms-high-contrast: none) {
-
   .slide-start.l,
   .slide-start.r,
   .slide-start.z {
@@ -578,7 +572,7 @@ main {
   text-align: center;
   padding: 15px 25px;
   min-width: 200px;
-  transition: .5s;
+  transition: 0.5s;
   position: relative;
   z-index: 0;
 
@@ -595,7 +589,7 @@ main {
   }
 
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -605,7 +599,7 @@ main {
   padding: 7px 10px 7px 25px;
 }
 
-.u-btn+.u-btn {
+.u-btn + .u-btn {
   margin-left: 15px;
 }
 
@@ -628,7 +622,7 @@ main {
     display: block;
     font-family: $font02;
     font-size: 35px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     margin-bottom: 10px;
   }
 
@@ -653,7 +647,7 @@ main {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  padding: 0 0 0 calc((100% - 1024px)/2);
+  padding: 0 0 0 calc((100% - 1024px) / 2);
   margin-bottom: 85px;
   z-index: 0;
 
@@ -674,7 +668,7 @@ main {
       display: block;
       font-family: $font02;
       font-size: 35px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       margin-bottom: 20px;
     }
 
@@ -691,7 +685,7 @@ main {
 
   &.reverse {
     flex-direction: row;
-    padding: 0 calc((100% - 1024px)/2) 0 0;
+    padding: 0 calc((100% - 1024px) / 2) 0 0;
 
     .l-img {
       text-align: right;
@@ -722,7 +716,7 @@ main {
       display: block;
       font-family: $font02;
       font-size: 35px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       margin-bottom: 15px;
     }
 
@@ -757,7 +751,7 @@ main {
     width: 32.22%;
   }
 
-  >li {
+  > li {
     border: 1px solid #eeeeee;
     width: 32.22%;
   }
@@ -826,7 +820,7 @@ main {
       display: block;
       font-family: $font02;
       font-size: 14px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -849,7 +843,9 @@ main {
 
   li {
     text-align: center;
-    width: calc(100% / 5 - 15px); //カラム数によって5の部分の数値を変更してください。
+    width: calc(
+      100% / 5 - 15px
+    ); //カラム数によって5の部分の数値を変更してください。
     margin: 0 7.5px;
 
     &:nth-child(n + 6) {
@@ -863,10 +859,10 @@ main {
     border: 1px solid #fff;
     height: 100%;
     padding: 40px 20px;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
-      background: rgba(#fff, .1);
+      background: rgba(#fff, 0.1);
       border-color: #fff;
     }
   }
@@ -933,7 +929,7 @@ main {
       color: $iro01;
       font-family: $font02;
       font-size: 15px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       margin-bottom: 20px;
     }
   }
@@ -954,7 +950,7 @@ main {
   .l-desc {
     flex: 1;
 
-    p+p {
+    p + p {
       margin-top: 15px;
     }
   }
@@ -978,7 +974,7 @@ main {
     height: 100%;
     background: #fff;
     border: 1px solid #eee;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
       .item-img {
@@ -995,7 +991,7 @@ main {
     overflow: hidden;
 
     img {
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 
@@ -1021,7 +1017,7 @@ main {
       color: $iro01;
       font-family: $font02;
       font-size: 15px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
     }
   }
 }
@@ -1035,7 +1031,7 @@ main {
   display: flex;
   justify-content: space-between;
 
-  >.item {
+  > .item {
     width: 48%;
   }
 }
@@ -1080,7 +1076,7 @@ main {
       display: block;
       font-family: $font02;
       font-size: 35px;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       margin-bottom: 10px;
     }
 
@@ -1121,7 +1117,7 @@ main {
 
     &:hover {
       .list-img {
-        opacity: .5;
+        opacity: 0.5;
       }
 
       .list-ttl {
@@ -1133,7 +1129,7 @@ main {
   .list-img {
     border: 1px solid #eaeaea;
     margin-bottom: 15px;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   img {
@@ -1163,7 +1159,7 @@ main {
     font-size: 12px;
     line-height: 1;
 
-    +.category::before {
+    + .category::before {
       content: "/";
       margin: 0 5px;
     }
@@ -1244,7 +1240,6 @@ main {
   }
 }
 
-
 /*------------
 Footer
 --------------*/
@@ -1261,7 +1256,7 @@ Footer
     width: 50px;
     height: 50px;
     padding: 18px 0 0;
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
     z-index: 0;
 
@@ -1276,7 +1271,7 @@ Footer
       bottom: 0;
       transform: translateZ(0) scaleY(0);
       transform-origin: right bottom;
-      transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       z-index: -1;
     }
 
@@ -1318,16 +1313,16 @@ Footer
   margin-bottom: 25px;
 
   li {
-    &+li {
+    & + li {
       margin-left: 15px;
     }
   }
 
   a {
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }
@@ -1337,13 +1332,13 @@ Footer
   display: flex;
   justify-content: flex-end;
 
-  >ul {
-    &+ul {
+  > ul {
+    & + ul {
       margin-left: 50px;
     }
 
-    >li {
-      &+li {
+    > li {
+      & + li {
         margin-top: 5px;
       }
 
@@ -1391,10 +1386,10 @@ Footer
   }
 
   a {
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }
@@ -1408,12 +1403,11 @@ Footer
 }
 
 @media only screen and (max-width: 800px) {
-
   /*------------
 Header
 --------------*/
   .header {
-    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
     align-items: center;
@@ -1435,7 +1429,6 @@ Header
       width: auto;
     }
   }
-
 
   /*------------
 G-navi
@@ -1459,7 +1452,7 @@ G-navi
   .sp-navi-btns {
     display: flex;
     background: var(--navi-background);
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, .15);
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.15);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -1534,7 +1527,7 @@ G-navi
       width: 22px;
       height: 1px;
       transform: translateX(-50%);
-      transition: .4s;
+      transition: 0.4s;
 
       &:nth-of-type(1) {
         top: 20px;
@@ -1578,7 +1571,7 @@ G-navi
     bottom: 0;
     left: 0;
     right: 0;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
     z-index: 9999;
 
@@ -1594,12 +1587,12 @@ G-navi
     border-top: 1px solid #d6d6d6;
     margin: 0 0 30px;
 
-    >li {
+    > li {
       border-bottom: 1px solid #d6d6d6;
     }
 
-    >li {
-      >a {
+    > li {
+      > a {
         color: #333;
         display: block;
         font-size: 14px;
@@ -1617,7 +1610,7 @@ G-navi
           content: "";
           background-color: #333;
           position: absolute;
-          transition: .5s;
+          transition: 0.5s;
         }
 
         &::before {
@@ -1640,7 +1633,7 @@ G-navi
           }
         }
 
-        >a {
+        > a {
           padding: 15px 0;
           width: 85%;
         }
@@ -1650,9 +1643,8 @@ G-navi
     .child {
       padding: 0 0 15px;
 
-      >ul {
-
-        >li {
+      > ul {
+        > li {
           position: relative;
           padding-left: 15px;
 
@@ -1664,7 +1656,7 @@ G-navi
             top: 0;
           }
 
-          >a {
+          > a {
             font-size: 13px;
             font-weight: bold;
           }
@@ -1675,7 +1667,7 @@ G-navi
 
   .sp-navi-other {
     .item {
-      &+.item {
+      & + .item {
         margin: 25px 0 0;
       }
     }
@@ -1743,7 +1735,6 @@ Hero01
 --------------*/
   .hero01 {
     .hero-bg {
-
       .slide01 {
         background: url(../images/hero01.jpg) no-repeat center / cover;
       }
@@ -1777,7 +1768,6 @@ Hero01
         font-size: 13px;
       }
     }
-
   }
 
   /*------------
@@ -1788,7 +1778,7 @@ Hero02
     height: auto;
 
     &::before {
-      background: #F1F1F1;
+      background: #f1f1f1;
       content: "";
       display: block;
       height: 100vh;
@@ -1834,7 +1824,6 @@ Hero02
         left: 0;
       }
     }
-
   }
 
   /*------------
@@ -1842,7 +1831,6 @@ Hero03
 --------------*/
   .hero03 {
     .hero-bg {
-
       .slide01 {
         background: url(../images/hero01.jpg) no-repeat center / cover;
       }
@@ -1876,9 +1864,7 @@ Hero03
         font-size: 13px;
       }
     }
-
   }
-
 
   /*------------
 Top contents
@@ -1904,7 +1890,7 @@ Top contents
     min-width: 0;
   }
 
-  .u-btn+.u-btn {
+  .u-btn + .u-btn {
     margin: 15px 0 0;
   }
 
@@ -1993,10 +1979,10 @@ Top contents
   .sec01-list {
     display: block;
 
-    >li {
+    > li {
       width: 100%;
 
-      &+li {
+      & + li {
         margin-top: 30px;
       }
     }
@@ -2036,7 +2022,8 @@ Top contents
         margin-bottom: 10px;
       }
 
-      .txt02 {}
+      .txt02 {
+      }
     }
 
     .l-btn {
@@ -2064,7 +2051,7 @@ Top contents
 
     a {
       padding: 15px;
-      transition: .5s;
+      transition: 0.5s;
     }
 
     .list-img {
@@ -2130,7 +2117,7 @@ Top contents
     .item {
       width: 100%;
 
-      &+.item {
+      & + .item {
         margin-top: 30px;
       }
     }
@@ -2164,10 +2151,10 @@ Top contents
   .sec05-wrapper {
     display: block;
 
-    >.item {
+    > .item {
       width: 100%;
 
-      &+.item {
+      & + .item {
         margin-top: 50px;
       }
     }
@@ -2272,7 +2259,6 @@ Top contents
     }
   }
 
-
   /*------------
 Footer
 --------------*/
@@ -2314,16 +2300,16 @@ Footer
   .site-map {
     display: block;
 
-    >ul {
+    > ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      &+ul {
+      & + ul {
         margin: 15px 0 0;
       }
 
-      >li {
+      > li {
         width: 49%;
         margin-bottom: 5px;
 
@@ -2331,7 +2317,7 @@ Footer
           width: 100%;
         }
 
-        &+li {
+        & + li {
           margin-top: 0;
         }
 
