@@ -17,7 +17,7 @@ jobs:
             submodules: true
 
       - name: Make destination directory for compiled CSS
-        run: mkdir -vp /dist/css
+        run: sudo mkdir -vp /dist/css
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.7
