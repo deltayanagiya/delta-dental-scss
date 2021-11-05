@@ -1,0 +1,75 @@
+/*-----------------------------------------------------------
+Base
+-----------------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #d4dcd6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  line-height: 2;
+  letter-spacing: .1em;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  color: $iro01;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.no-link {
+  pointer-events: none;
+}
+
+.anchor {
+  pointer-events: none;
+  margin-top: -100px;
+  padding-top: 100px;
+}
+
+a[href^="tel"] {
+  cursor: default;
+}
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .anchor {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,288 @@
+.h-wrapper {
+  padding: 15px 2.5vw;
+}
+
+.h-contents {
+  display: flex;
+  align-items: center;
+
+  .item {
+    & + .item {
+      margin-left: 20px;
+    }
+  }
+
+  .tel {
+    display: inline-block;
+    color: $iro02;
+    font-family: $font02;
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .txt {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    display: inline-block;
+    background: $iro02;
+    color: #fff;
+    font-family: $font01;
+    line-height: 1;
+    text-align: center;
+    padding: 16px 25px;
+    transition: 0.5s;
+
+    i {
+      display: inline-block;
+      width: 17px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.h-time {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-gap: 5px 10px;
+
+  dt {
+    border: 1px solid #333;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    padding: 1px 5px 0;
+  }
+}
+
+/*------------
+G-navi
+--------------*/
+.pc-navi {
+  background-color: $iro02;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  > ul {
+    color: #fff;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90%;
+
+    > li {
+      > a {
+        line-height: 100px;
+        &::after {
+          content: "";
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+.dropdown-nav {
+  z-index: 10;
+}
+
+/*------------
+Hero
+--------------*/
+.hero {
+  height: calc(100vh - 100px);
+}
+
+.sec08 {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+
+.sec08-layout {
+  display: flex;
+  position: relative;
+  min-height: 170px;
+
+  .l-intro {
+    width: 25.48%;
+  }
+
+  .l-desc {
+    flex: 1;
+  }
+
+  .l-ttl {
+    line-height: 1.5;
+
+    .txt01 {
+      display: block;
+      font-family: $font02;
+      font-size: 35px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .txt02 {
+      display: block;
+      font-family: $font01;
+      font-size: 16px;
+    }
+
+    &.white {
+      color: #fff;
+    }
+  }
+
+  .l-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.list-top-news {
+  font-size: 15px;
+
+  li {
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    padding-bottom: 15px;
+
+    & + li {
+      margin-top: 15px;
+    }
+  }
+
+  time {
+    display: inline-block;
+    color: #888;
+    width: 90px;
+    margin-right: 25px;
+  }
+
+  a {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: $font01;
+    max-width: 630px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /*------------
+Header
+--------------*/
+
+  .h-contents {
+    display: none;
+  }
+  /*------------
+Hero01
+--------------*/
+  .hero01 {
+    .hero-bg {
+      height: 45vh;
+      .hero-ttl {
+        bottom: 30px;
+      }
+    }
+  }
+
+  .hero02 {
+    .hero-ttl {
+      bottom: 30px;
+    }
+  }
+
+  /*------------
+Hero03
+--------------*/
+  .hero03 {
+    .hero-bg {
+      height: 45vh;
+    }
+    .hero-ttl {
+      bottom: 30px;
+    }
+  }
+
+  .sec08 {
+    padding: 50px 0;
+  }
+
+  .sec08-layout {
+    display: block;
+
+    .l-intro {
+      width: 100%;
+    }
+
+    .l-ttl {
+      text-align: center;
+      margin-bottom: 20px;
+
+      .txt01 {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .l-btn {
+      position: static;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  .list-top-news {
+    li {
+      display: block;
+      padding-bottom: 0;
+
+      & + li {
+        margin-top: 5px;
+      }
+    }
+
+    time {
+      font-size: 12px;
+      margin-right: 10px;
+
+      &::after {
+        margin: 0 0 0 10px;
+        vertical-align: 1px;
+      }
+    }
+
+    a {
+      max-width: 100%;
+    }
+  }
+
+  .site-map {
+    > ul {
+      > li {
+        width: 49%;
+        ul {
+          li {
+            width: 49%;
+          }
+        }
+      }
+    }
+  }
+}
