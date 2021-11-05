@@ -1,0 +1,671 @@
+/*-----------------------------------------------------------
+投稿
+-----------------------------------------------------------*/
+
+.list-under-news {
+  li {
+    display: flex;
+    text-align: left;
+  }
+
+  time {
+    display: inline-block;
+    color: #888;
+    width: 90px;
+    margin-right: 50px;
+
+    &::after {
+      content: "|";
+      font-size: 12px;
+      margin: 0 0 0 25px;
+      vertical-align: 2px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*普通投稿*/
+.list-post-type01 {
+  margin-bottom: 80px;
+
+  li {
+    overflow: hidden;
+
+    &+li {
+      margin-top: 50px;
+    }
+  }
+
+  .list-ttl {
+    background: url(../images/share/line-dot.svg) repeat-x bottom left;
+    color: $iro02;
+    font-family: $font01;
+    font-size: 20px;
+    position: relative;
+    padding: 0 0 15px;
+    margin: 0 0 25px;
+
+    a {
+      transition: .5s;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  .list-img {
+    float: left;
+    margin: 0 30px 0 0;
+    width: 250px;
+
+    img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    a {
+      transition: .5s;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  .list-data {
+    font-size: 13px;
+    margin: 0 0 5px;
+  }
+
+  time {
+    display: inline-block;
+    color: #98918c;
+    font-size: 14px;
+    vertical-align: -1px;
+    margin: 0 25px 0 0;
+  }
+
+  .category {
+    background: $iro01;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1;
+    padding: 5px 8px;
+    margin: 0 10px 0 0;
+  }
+
+  .list-txt {
+    margin: 0 0 30px;
+  }
+
+  .list-btn {
+    text-align: right;
+  }
+}
+
+/*詳細ページ*/
+.l-post-single {
+  margin-bottom: 80px;
+
+  .l-ttl {
+    color: $iro02;
+    font-family: $font01;
+    font-size: 30px;
+    margin: 0 0 35px;
+  }
+
+  .post-data {
+    margin: 0 0 20px;
+
+    time {
+      display: inline-block;
+      color: #98918c;
+      font-size: 14px;
+      vertical-align: -1px;
+      margin: 0 20px 0 0;
+    }
+
+    .category {
+      background: $iro01;
+      color: #fff;
+      display: inline-block;
+      font-size: 11px;
+      line-height: 1;
+      padding: 5px 8px;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+/*詳細ページ*/
+.postdata {
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 15px;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    font-weight: bold; //デバイスフォントにフォントプラスを使う際は、太文字のフォント指定
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  ul {
+    li {
+      list-style: inside disc;
+
+      >ul {
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+
+  ol {
+    li {
+      list-style: inside decimal;
+
+      >ol {
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+}
+
+/*セレクト式カテゴリー*/
+.select-area {
+  display: flex;
+  align-items: center;
+  margin: 0 0 50px;
+
+  .select-item {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 0;
+  }
+
+  .select-ttl {
+    display: inline-block;
+    font-family: $font01;
+    font-size: 16px;
+    margin: 0 15px 0 0;
+  }
+
+  .select-category {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    text-overflow: '';
+    background: #fff url(../images/share/icon_arrow_down.svg) no-repeat;
+    background-size: 20px;
+    background-position: right center;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    color: #333;
+    font-size: 16px;
+    vertical-align: middle;
+    height: 35px;
+    min-width: 150px;
+    padding: 5px 20px 5px 5px;
+  }
+
+  .select-category::-ms-expand {
+    display: none;
+  }
+}
+
+/*ページャー*/
+.post-number {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: $font01;
+
+  span,
+  a {
+    display: inline-block;
+    color: $iro01;
+    border: 1px solid $iro01;
+    font-size: 13px;
+    text-align: center;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 4px;
+    margin: 0 4px;
+  }
+
+  a {
+    &:hover {
+      background: $iro01;
+      color: #fff;
+    }
+  }
+
+  .current {
+    background: $iro01;
+    color: #fff;
+  }
+}
+
+.post-number-single {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: $font01;
+
+  a {
+    display: inline-block;
+  }
+
+  .all {
+    background: $iro01;
+    border: 1px solid $iro01;
+    color: #fff;
+    font-size: 13px;
+    line-height: 28px;
+    max-width: 200px;
+    margin: 0 10px;
+    height: 30px;
+    width: 100%;
+
+    &:hover {
+      background: #fff;
+      color: $iro01;
+    }
+  }
+
+  .prev,
+  .next {
+    border: 1px solid $iro01;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-bottom: 1px solid $iro01;
+      margin: 0 auto;
+      top: 12px;
+    }
+
+    &:hover {
+      background: $iro01;
+
+      &::before {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .prev {
+    &::before {
+      transform: rotate(-135deg);
+      left: 11px;
+      border-left: 1px solid $iro01;
+    }
+  }
+
+  .next {
+    &::before {
+      transform: rotate(135deg);
+      right: 11px;
+      border-right: 1px solid $iro01;
+    }
+  }
+}
+
+/*症例紹介*/
+.post-case-layout {
+  border: 2px solid #eee;
+  background: #fff;
+  padding: 45px 50px;
+  margin-bottom: 50px;
+
+  .post-data {
+    margin: 0 0 15px;
+
+    time {
+      display: inline-block;
+      color: #98918c;
+      font-size: 14px;
+      vertical-align: -1px;
+      margin: 0 20px 0 0;
+    }
+
+    .category {
+      background: $iro01;
+      color: #fff;
+      display: inline-block;
+      font-size: 11px;
+      line-height: 1;
+      padding: 5px 8px;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .l-ttl {
+    border-bottom: 1px solid #eee;
+    font-family: $font01;
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  .before-after {
+    margin-bottom: 40px;
+  }
+
+  .l-btn {
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .l-item {
+    &+.l-item {
+      margin-top: 50px;
+    }
+
+    .item-ttl {
+      border-bottom: 1px solid #eee;
+      color: $iro02;
+      font-family: $font01;
+      font-size: 20px;
+      position: relative;
+      padding: 0 0 12px;
+      margin: 0 0 25px;
+
+      &::before {
+        content: "";
+        background: $iro01;
+        width: 25px;
+        height: 1px;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
+    }
+  }
+
+  .l-table {
+    background-color: #fff;
+    border: 1px solid #bbb;
+
+    th,
+    td {
+      border: 1px solid #eee;
+      line-height: 1.7;
+      padding: 15px;
+    }
+
+    th {
+      background: $iro01;
+      color: #fff;
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+
+  .item {
+    text-align: center;
+    position: relative;
+
+    &+.item {
+      figure {
+        &::before {
+          content: "";
+          border-style: solid;
+          border-width: 13.5px 0 13.5px 14px;
+          border-color: transparent transparent transparent #333;
+          position: absolute;
+          left: -32px;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+
+  figure {
+    display: grid;
+    place-items: center;
+    height: 300px;
+    position: relative;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+      max-height: 300px;
+    }
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 15px;
+  }
+}
+
+.list-case-details {
+  >li {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &+li {
+      border-top: 1px dotted #c8c8c8;
+      margin-top: 30px;
+      padding-top: 30px;
+    }
+  }
+
+  .list-img {
+    width: 35%;
+    margin: 0 0 0 30px;
+  }
+
+  .list-desc {
+    flex: 1;
+  }
+
+  .list-ttl {
+    color: $iro01;
+    font-family: $font01;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 0px) {
+
+  /*普通投稿*/
+  .list-post-type01 {
+    margin: 0 0 50px;
+
+    li {
+      &+li {
+        margin-top: 20px;
+      }
+    }
+
+    .list-ttl {
+      font-size: 18px;
+      padding: 0 0 7px;
+      margin: 0 0 15px;
+    }
+
+    .list-img {
+      float: left;
+      margin: 0 15px 0 0;
+      width: 40%;
+
+      img {
+        width: 100%;
+        height: 25vw;
+      }
+    }
+
+    .list-desc {
+      margin: -5px 0 0;
+    }
+
+    .list-data {}
+
+    time {
+      font-size: 12px;
+      margin: 0 15px 0 0;
+    }
+
+    .list-txt {
+      font-size: 11px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin: 0 0 5px;
+    }
+
+    .list-btn {
+      margin-top: 15px;
+
+      a {
+        padding: 12px 25px;
+        font-size: 13px;
+        min-width: 130px;
+      }
+    }
+  }
+
+  /*詳細ページ*/
+  .l-post-single {
+    .l-ttl {
+      font-size: 22px;
+      margin: 0 0 30px;
+    }
+  }
+
+  /*セレクト式カテゴリー*/
+  .select-area {
+    display: block;
+    margin: 0 0 30px;
+
+    .select-item {
+      margin: 0;
+
+      &+.select-item {
+        margin-top: 10px;
+      }
+    }
+
+    .select-ttl {
+      font-size: 15px;
+    }
+  }
+
+  /*症例紹介*/
+  .post-case-layout {
+    padding: 25px 15px;
+    margin-bottom: 30px;
+
+    .l-ttl {
+      font-size: 18px;
+      line-height: 1.7;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .before-after {
+      margin-bottom: 20px;
+    }
+
+    .l-btn {
+      margin-top: 25px;
+    }
+
+    .l-table {
+      font-size: 12px;
+
+      th,
+      td {
+        padding: 5px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+
+    .item {
+      &+.item {
+        &::before {
+          content: "";
+          border-style: solid;
+          border-width: 15px 12.5px 0 12.5px;
+          border-color: #333 transparent transparent transparent;
+          position: absolute;
+          left: 50%;
+          top: -30px;
+          transform: translate(-50%, 0);
+        }
+
+        figure {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    figure {
+      height: auto;
+    }
+  }
+
+  .list-case-details {
+    >li {
+      display: block;
+    }
+
+    .list-img {
+      width: 100%;
+      margin: 0 0 15px;
+      text-align: center;
+    }
+  }
+}

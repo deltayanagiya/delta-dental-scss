@@ -1,0 +1,16 @@
+/*-----------------------------------------------------------
+Animation
+-----------------------------------------------------------*/
+
+.fade-in {
+  will-change: transform;
+  opacity: 0;
+  transition: transform 1.8s cubic-bezier(.19,1,.435,.99),opacity .8s cubic-bezier(.19,1,.435,.99);
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.fade-in.is-action {
+  transform: translateY(0);
+  opacity: 1;
+}
