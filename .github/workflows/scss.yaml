@@ -46,7 +46,7 @@ jobs:
             persist-credentials: false
 
       - name: Move compiled CSS to path within future branch
-        run: mv /tmp/assets assets/
+        run: mv /tmp/assets/css assets/
 
       - name: Add and Commit changes to future branch
         run: |
