@@ -26,9 +26,9 @@ jobs:
           destination: /tmp/assets/css/style.css
 
       - name: ssh key generate
-        run: echo "$SSH_PRIVATE_KEY" ＞ key ＆＆ chmod 600 key
+        run: echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: rsync deploy
-        run: rsync -azrP -e "ssh -p 2222 -o StrictHostKeyChecking=no" ./* ${{secrets.RSYNC_COMMAND}}
+        run: rsync -rlOtcv --delete --exclude-from=.rsyncignore -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" . ${{secrets.RSYNC_COMMAND}}
  
