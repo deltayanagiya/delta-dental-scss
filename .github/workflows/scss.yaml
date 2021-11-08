@@ -78,5 +78,5 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: rsync deploy
-        run: rsync -rlOtcv --delete --exclude-from=.rsyncignore -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" . ${{secrets.RSYNC_COMMAND}}
+        run: rsync -rlOtcv --delete --exclude-from=.rsyncignore --exclude-from=assets/* -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" . ${{secrets.RSYNC_COMMAND}}
  
