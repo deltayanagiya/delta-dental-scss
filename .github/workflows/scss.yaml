@@ -19,17 +19,19 @@ jobs:
       - name: Make destination directory for compiled CSS
         run: mkdir -vp /tmp/assets/css
 
-      - name: Compile CSS from SCSS files
+      - name: Compile CSS from SCSS files style.css
         uses: gha-utilities/sass-build@v0.4.7
         with:
-          source: ./source.scss
-          destination: /tmp/assets/css/source.css
-      - name: Compile CSS from SCSS files
+          source: ./style.scss
+          destination: /tmp/assets/css/style.css
+
+      - name: Compile CSS from SCSS files top01.css
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./top01.scss
           destination: /tmp/assets/css/top01.css
-      - name: Compile CSS from SCSS files
+
+      - name: Compile CSS from SCSS files top02.css
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./top02.scss
