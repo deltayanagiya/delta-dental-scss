@@ -61,16 +61,31 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: future
 
-      - name: Initialize Pull Request
-        uses: gha-utilities/init-pull-request@v0.0.4
+
+      - uses: actions/checkout@v2
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
         with:
-          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
-          head: future
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+           create pull request
+          signoff: false
+          branch: delta-dental-scss/future
           base: main
-          title: 'Updates site files from latest Actions build'
-          body: >
-            Perhaps a multi-line description
-            about latest features and such.
+          delete-branch: true
+          title: |
+            Update
+          assignees: deltayanagiya
+          draft: false
+
+      - name: merge PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-url }} --merge
+
+
+
 
       - name: ssh key generate
         run: echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
