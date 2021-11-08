@@ -320,18 +320,6 @@ Hero01
       background-size: cover;
     }
 
-    .slide01 {
-      background: url(../images/hero01.jpg) no-repeat center / cover;
-    }
-
-    .slide02 {
-      background: url(../images/hero02.jpg) no-repeat center / cover;
-    }
-
-    .slide03 {
-      background: url(../images/hero03.jpg) no-repeat center / cover;
-    }
-
     .slick-dots {
       width: auto;
       bottom: 25px;
@@ -456,18 +444,6 @@ Hero03
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-    }
-
-    .slide01 {
-      background: url(../images/hero01.jpg) no-repeat center / cover;
-    }
-
-    .slide02 {
-      background: url(../images/hero02.jpg) no-repeat center / cover;
-    }
-
-    .slide03 {
-      background: url(../images/hero03.jpg) no-repeat center / cover;
     }
 
     .slick-dots {
@@ -1734,19 +1710,8 @@ Hero
 Hero01
 --------------*/
   .hero01 {
+    display: block;
     .hero-bg {
-      .slide01 {
-        background: url(../images/hero01.jpg) no-repeat center / cover;
-      }
-
-      .slide02 {
-        background: url(../images/hero02.jpg) no-repeat center / cover;
-      }
-
-      .slide03 {
-        background: url(../images/hero03.jpg) no-repeat center / cover;
-      }
-
       .slick-dots {
         display: none !important;
       }
@@ -1830,24 +1795,6 @@ Hero02
 Hero03
 --------------*/
   .hero03 {
-    .hero-bg {
-      .slide01 {
-        background: url(../images/hero01.jpg) no-repeat center / cover;
-      }
-
-      .slide02 {
-        background: url(../images/hero02.jpg) no-repeat center / cover;
-      }
-
-      .slide03 {
-        background: url(../images/hero03.jpg) no-repeat center / cover;
-      }
-
-      .slick-dots {
-        display: none !important;
-      }
-    }
-
     .hero-ttl {
       padding: 0 5vw;
       top: inherit;
@@ -2020,9 +1967,6 @@ Top contents
       .txt01 {
         font-size: 23px;
         margin-bottom: 10px;
-      }
-
-      .txt02 {
       }
     }
 
