@@ -16,8 +16,6 @@ jobs:
             fetch-depth: 10
             submodules: true
 
-      - name: clean tmp
-        run: rm -rf /tmp/
       - name: clean asset
         run: rm -rf assets
       - name: Make destination directory for compiled CSS
