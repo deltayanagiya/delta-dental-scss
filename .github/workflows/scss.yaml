@@ -17,10 +17,18 @@ jobs:
             submodules: true
 
       - name: Make destination directory for compiled CSS
-        run: mkdir -vp /tmp/repo-name/assets/css
+        run: mkdir -vp /tmp/assets/css
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./style.scss
-          destination: /tmp/repo-name/assets/css/main.css
+          destination: /tmp/assets/css/style.css
+
+      - name: ssh key generate
+        run: echo ”$SSH_PRIVATE_KEY” ＞ key ＆＆ chmod 600 key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: rsync deploy
+        run: rsync -azrP -e "ssh -p 2222" ./* baboon@ssh-baboon.heteml.net:/home/users/1/baboon/web/tool/template/_copy/dental/wp-content/themes/ZeroTheme/scss/
+ 
