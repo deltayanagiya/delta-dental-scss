@@ -1,0 +1,8 @@
+.env
+.editorconfig
+.git
+.giattributes
+.github
+node_modules/
+storage/
+id_rsa
