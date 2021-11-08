@@ -1,0 +1,10 @@
+.env
+.editorconfig
+.git
+.giattributes
+.github
+.rsyncignore
+node_modules/
+storage/
+id_rsa
+LICENSE

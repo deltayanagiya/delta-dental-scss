@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - future
 
 
 jobs:
@@ -12,21 +12,71 @@ jobs:
       - name: Checkout source Git branch
         uses: actions/checkout@v2
         with:
-            ref: main
+            ref: future
             fetch-depth: 10
             submodules: true
 
       - name: Make destination directory for compiled CSS
-        run: sudo mkdir -vp /dist/css
+        run: mkdir -vp /tmp/assets/css
 
-      - name: Compile CSS from SCSS files
+      - name: Compile CSS from SCSS files style.css
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./style.scss
-          destination: /dist/css/style.css
+          destination: /tmp/assets/css/style.css
 
-      - name: Upload Complied CSS
-        uses: actions/upload-artifact@v1.0.0
+      - name: Compile CSS from SCSS files top01.css
+        uses: gha-utilities/sass-build@v0.4.7
         with:
-          name: Compiled-CSS
-          path: /dist/css
+          source: ./top01.scss
+          destination: /tmp/assets/css/top01.css
+
+      - name: Compile CSS from SCSS files top02.css
+        uses: gha-utilities/sass-build@v0.4.7
+        with:
+          source: ./top02.scss
+          destination: /tmp/assets/css/top02.css
+
+
+      - name: Checkout destination Git branch
+        uses: actions/checkout@v2
+        with:
+            ref: future
+            fetch-depth: 1
+            persist-credentials: false
+
+      - name: Move compiled CSS to path within future branch
+        run: mv /tmp/assets assets/
+
+      - name: Add and Commit changes to future branch
+        run: |
+          git config --local user.email ${{ secrets.MY_EMAIL}}
+          git config --local user.name 'deltayanagiya'
+          git add assets/css/*
+          git commit -m 'Updates compiled CSS files'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: future
+
+      - name: Initialize Pull Request
+        uses: gha-utilities/init-pull-request@v0.0.4
+        with:
+          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
+          head: future
+          base: main
+          title: 'Updates site files from latest Actions build'
+          body: >
+            Perhaps a multi-line description
+            about latest features and such.
+
+
+      - name: ssh key generate
+        run: echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: rsync deploy
+        run: rsync -rlOtcv --delete --exclude-from=.rsyncignore -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" . ${{secrets.RSYNC_COMMAND}}
+ 
