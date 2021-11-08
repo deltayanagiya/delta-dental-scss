@@ -52,7 +52,7 @@ jobs:
         run: |
           git config --local user.email ${{ secrets.MY_EMAIL }}
           git config --local user.name 'deltayanagiya'
-          git add assets/css/*
+          git add .
           git commit -m 'Updates compiled CSS files'
 
       - name: Push changes
