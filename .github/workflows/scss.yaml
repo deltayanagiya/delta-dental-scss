@@ -22,8 +22,8 @@ jobs:
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.7
         with:
-          source: ./style.scss
-          destination: /tmp/assets/css/style.css
+          source: ./source.scss
+          destination: /tmp/assets/css/source.css
 
       - name: ssh key generate
         run: echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
