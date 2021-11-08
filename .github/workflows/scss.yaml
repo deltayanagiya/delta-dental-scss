@@ -38,6 +38,41 @@ jobs:
           destination: /tmp/assets/css/top02.css
 
 
+      - name: Checkout destination Git branch
+        uses: actions/checkout@v2
+        with:
+            ref: future
+            fetch-depth: 1
+            persist-credentials: false
+
+      - name: Move compiled CSS to path within pr-pages branch
+        run: mv /tmp/assets/css assets/
+
+      - name: Add and Commit changes to future branch
+        run: |
+          git config --local user.email ${{ secrets.MY_EMAIL}}
+          git config --local user.name 'deltayanagiya'
+          git add assets/css/*
+          git commit -m 'Updates compiled CSS files'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: future
+
+      - name: Initialize Pull Request
+        uses: gha-utilities/init-pull-request@v0.0.4
+        with:
+          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
+          head: future
+          base: main
+          title: 'Updates site files from latest Actions build'
+          body: >
+            Perhaps a multi-line description
+            about latest features and such.
+
+
       - name: ssh key generate
         run: echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
         env:
