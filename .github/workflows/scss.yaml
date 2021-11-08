@@ -50,7 +50,7 @@ jobs:
 
 
       - name: Move compiled CSS to path within future branch
-        run: mv /tmp/assets/css assets/
+        run: mv /tmp/assets/ assets/
 
       - name: Add and Commit changes to future branch
         run: |
