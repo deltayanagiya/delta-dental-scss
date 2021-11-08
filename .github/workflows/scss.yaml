@@ -85,6 +85,8 @@ jobs:
         run: rsync -rlOtcv --delete --exclude-from=.rsyncignore --exclude "assets/" -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" . ${{secrets.RSYNC_COMMAND}}
  
       - name: ls
-        run: ls -la
+        run: ls -la assets/css/
+      - name: pwd
+        run: pwd
       - name: rsync deploy css
         run: rsync -rlOtcv --delete --exclude-from=.rsyncignore -e "ssh -p 2222 -i id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ~/work/delta-dental-scss/delta-dental-scss/assets/css/* ${{secrets.RSYNC_COMMAND_CSS}}
