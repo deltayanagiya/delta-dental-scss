@@ -50,7 +50,7 @@ jobs:
 
       - name: Add and Commit changes to future branch
         run: |
-          git config --local user.email ${{ secrets.MY_EMAIL}}
+          git config --local user.email ${{ secrets.MY_EMAIL }}
           git config --local user.name 'deltayanagiya'
           git add assets/css/*
           git commit -m 'Updates compiled CSS files'
@@ -60,29 +60,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: future
-
-
-      - uses: actions/checkout@v2
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: |
-           create pull request
-          signoff: false
-          branch: delta-dental-scss/future
-          base: main
-          delete-branch: true
-          title: |
-            Update
-          assignees: deltayanagiya
-          draft: false
-
-      - name: merge PR
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr merge ${{ steps.cpr.outputs.pull-request-url }} --merge
 
 
       - name: Initialize Pull Request
