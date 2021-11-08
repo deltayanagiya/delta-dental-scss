@@ -16,8 +16,6 @@ jobs:
             fetch-depth: 10
             submodules: true
 
-      - name: clean asset
-        run: rm -rf assets
       - name: Make destination directory for compiled CSS
         run: mkdir -vp /tmp/assets/css
 
@@ -46,6 +44,10 @@ jobs:
             ref: future
             fetch-depth: 1
             persist-credentials: false
+
+      - name: clean asset
+        run: rm -rf assets
+
 
       - name: Move compiled CSS to path within future branch
         run: mv /tmp/assets/css assets/
