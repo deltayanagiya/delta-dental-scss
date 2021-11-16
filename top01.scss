@@ -199,12 +199,12 @@ Hero01
     height: auto;
   }
   .hero01 {
+    .hero-ttl {
+      top: initial;
+      bottom: 30px;
+    }
     .hero-bg {
       height: 45vh;
-      .hero-ttl {
-        top: initial;
-        bottom: 30px;
-      }
     }
   }
 

@@ -25,6 +25,13 @@ jobs:
           source: ./style.scss
           destination: /tmp/assets/css/style.css
 
+      - name: Install NPM dependencies
+        run: npm ci
+
+      - name: Run Prettier
+        run: npm run format
+
+
       - name: Compile CSS from SCSS files top01.css
         uses: gha-utilities/sass-build@v0.4.7
         with:
