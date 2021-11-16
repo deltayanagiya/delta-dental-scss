@@ -5,7 +5,7 @@ on:
 
 
 env:
-  FILE_PATTERN: "/tmp/assets/css/*.{ts,tsx,js,jsx}"
+  FILE_PATTERN: "/tmp/assets/css/*.css"
 
 jobs:
   build_css:
