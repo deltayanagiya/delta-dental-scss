@@ -4,6 +4,9 @@ on:
       - feature
 
 
+env:
+  FILE_PATTERN: "/tmp/assets/css/*.css"
+
 jobs:
   build_css:
     runs-on: ubuntu-latest
@@ -24,6 +27,16 @@ jobs:
         with:
           source: ./style.scss
           destination: /tmp/assets/css/style.css
+
+
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Run Prettier
+        run: |
+          npx prettier --write ${FILE_PATTERN}
+
 
       - name: Compile CSS from SCSS files top01.css
         uses: gha-utilities/sass-build@v0.4.7

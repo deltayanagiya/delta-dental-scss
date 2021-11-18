@@ -214,12 +214,22 @@ Hero03
   /*------------
 Hero01
 --------------*/
+  .hero {
+    height: auto;
+  }
+  .hero01,
+  .hero02,
+  .hero03 {
+    .hero-ttl {
+      top: initial;
+    }
+  }
   .hero01 {
+    .hero-ttl {
+      bottom: 120px;
+    }
     .hero-bg {
       height: 40vh;
-      .hero-ttl {
-        bottom: 120px;
-      }
     }
   }
   /*------------
@@ -228,6 +238,9 @@ Hero02
   .hero02 {
     .hero-news {
       padding: 20px;
+    }
+    .hero-ttl {
+      bottom: 15px;
     }
   }
 

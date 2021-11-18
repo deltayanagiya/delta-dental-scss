@@ -195,12 +195,23 @@ Header
   /*------------
 Hero01
 --------------*/
+  .hero {
+    height: auto;
+  }
+
+  .hero01,
+  .hero02,
+  .hero03 {
+    .hero-ttl {
+      top: initial;
+    }
+  }
   .hero01 {
+    .hero-ttl {
+      bottom: 30px;
+    }
     .hero-bg {
       height: 45vh;
-      .hero-ttl {
-        bottom: 30px;
-      }
     }
   }
 

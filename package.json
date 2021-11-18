@@ -1,0 +1,18 @@
+{
+  "name": "delta_dental_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github_delta_dental_scss:deltayanagiya/delta-dental-scss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
