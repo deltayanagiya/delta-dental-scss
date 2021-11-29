@@ -2041,57 +2041,57 @@ main {
   .map-layout .l-logo .logo {
     width: 250px;
   }
-  .map-layout .sec08 {
+  .sec08 {
     padding: 50px 0;
   }
-  .map-layout .sec08-layout {
+  .sec08-layout {
     display: block;
   }
-  .map-layout .sec08-layout .l-intro {
+  .sec08-layout .l-intro {
     width: 100%;
   }
-  .map-layout .sec08-layout .l-ttl {
+  .sec08-layout .l-ttl {
     text-align: center;
     margin-bottom: 20px;
   }
-  .map-layout .sec08-layout .l-ttl .txt01 {
+  .sec08-layout .l-ttl .txt01 {
     font-size: 30px;
     margin-bottom: 10px;
   }
-  .map-layout .sec08-layout .l-btn {
+  .sec08-layout .l-btn {
     position: static;
     text-align: center;
     margin-top: 30px;
   }
-  .map-layout .list-top-news li {
+  .list-top-news li {
     display: block;
     padding-bottom: 0;
   }
-  .map-layout .list-top-news li + li {
+  .list-top-news li + li {
     margin-top: 5px;
   }
-  .map-layout .list-top-news time {
+  .list-top-news time {
     font-size: 12px;
     margin-right: 10px;
   }
-  .map-layout .list-top-news time::after {
+  .list-top-news time::after {
     margin: 0 0 0 10px;
     vertical-align: 1px;
   }
-  .map-layout .list-top-news a {
+  .list-top-news a {
     max-width: 100%;
   }
-  .map-layout .inner {
+  .inner {
     text-align: center;
   }
-  .map-layout .address {
+  .address {
     margin-bottom: 10px;
   }
-  .map-layout .tel {
+  .tel {
     font-size: 20px;
     margin-bottom: 20px;
   }
-  .map-layout .l-dl {
+  .l-dl {
     text-align: left;
   }
   .pagetop {
