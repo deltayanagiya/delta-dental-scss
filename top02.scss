@@ -30,10 +30,7 @@ Header
       > ul {
         > li {
           & + li {
-          }
-
-          > a {
-            &:not(.btn) {
+          > a:not(.btn) {
               line-height: 80px;
             }
           }
