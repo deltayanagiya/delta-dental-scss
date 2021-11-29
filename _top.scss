@@ -479,6 +479,43 @@ Hero03
   }
 }
 
+
+.list-top-news {
+  font-size: 15px;
+
+  li {
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    padding-bottom: 15px;
+
+    & + li {
+      margin-top: 15px;
+    }
+  }
+
+  time {
+    display: inline-block;
+    color: #888;
+    width: 90px;
+    margin-right: 25px;
+  }
+
+  a {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: $font01;
+    max-width: 630px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
 .slide-start.l {
   animation: slide-left 15s linear forwards;
 }
