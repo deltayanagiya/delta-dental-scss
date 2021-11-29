@@ -628,6 +628,35 @@ a[href^="tel"] {
   font-family: "FOT-セザンヌ ProN DB";
   font-size: 20px;
 }
+.list-top-news {
+  font-size: 15px;
+}
+.list-top-news li {
+  display: flex;
+  border-bottom: 1px solid #dfdfdf;
+  text-align: left;
+  padding-bottom: 15px;
+}
+.list-top-news li + li {
+  margin-top: 15px;
+}
+.list-top-news time {
+  display: inline-block;
+  color: #888;
+  width: 90px;
+  margin-right: 25px;
+}
+.list-top-news a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "FOT-セザンヌ ProN DB";
+  max-width: 630px;
+}
+.list-top-news a:hover {
+  text-decoration: underline;
+}
 .slide-start.l {
   animation: slide-left 15s linear forwards;
 }
