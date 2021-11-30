@@ -30,10 +30,7 @@ Header
       > ul {
         > li {
           & + li {
-          }
-
-          > a {
-            &:not(.btn) {
+          > a:not(.btn) {
               line-height: 80px;
             }
           }
@@ -144,40 +141,6 @@ Hero03
   }
 }
 
-.list-top-news {
-  font-size: 14px;
-
-  li {
-    display: flex;
-    text-align: left;
-  }
-
-  time {
-    display: inline-block;
-    color: #888;
-    width: 90px;
-    margin-right: 50px;
-
-    &::after {
-      content: "|";
-      font-size: 12px;
-      margin: 0 0 0 25px;
-      vertical-align: 2px;
-    }
-  }
-
-  a {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 300px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 .sec06-layout {
   .l-ttl {
@@ -259,22 +222,6 @@ Hero03
     }
   }
 
-  .list-top-news {
-    font-size: 12px;
-
-    li {
-      display: flex !important;
-    }
-
-    time {
-      margin-right: 10px;
-
-      &::after {
-        margin: 0 0 0 10px;
-        vertical-align: 1px;
-      }
-    }
-  }
 
   .site-map {
     > ul {
