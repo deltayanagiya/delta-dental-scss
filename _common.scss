@@ -7,92 +7,116 @@ Common
   content: "";
   display: block;
 }
+
 .pc-only {
   display: block;
 }
+
 .sp-only {
   display: none;
 }
+
 //Hover effect
 .fade {
   transition: .5s;
+
   &:hover {
     opacity: .5;
   }
 }
+
 //Font style
-.bold,strong {
-  font-weight: bold;
-}
+.bold,
+strong {}
+
 .red {
   color: #F44336;
 }
+
 .marker {
   background: linear-gradient(transparent 60%, #FFC107 60%);
 }
+
 .notice {
   font-size: 13px;
   text-indent: -1rem;
   padding: 0 0 0 1rem;
 }
+
 .font01 {
   font-family: $font01;
 }
+
 .font02 {
   font-family: $font02;
 }
+
 //Margin bottom
 .mb0 {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
+
 .mb5 {
-  margin-bottom: 5px!important;
+  margin-bottom: 5px !important;
 }
+
 .mbS {
-  margin-bottom: 15px!important;
+  margin-bottom: 15px !important;
 }
+
 .mbM {
-  margin-bottom: 30px!important;
+  margin-bottom: 30px !important;
 }
+
 .mbL {
-  margin-bottom: 60px!important;
+  margin-bottom: 60px !important;
 }
+
 .mbXL {
-  margin-bottom: 100px!important;
+  margin-bottom: 100px !important;
 }
+
 //Margin top
 .mt0 {
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }
+
 .mtS {
   margin-top: 15px;
 }
+
 //Padding bottom
 .pb0 {
-  padding-bottom: 0!important;
+  padding-bottom: 0 !important;
 }
+
 //Text align
 .tac {
   text-align: center;
 }
+
 .tar {
   text-align: right;
 }
+
 .tal {
   text-align: left;
 }
+
 //Map
 .sp-map {
   iframe {
     vertical-align: bottom;
   }
 }
+
 //Video
 .video {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
 }
+
 .video iframe {
   position: absolute;
   top: 0;
