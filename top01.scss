@@ -9,7 +9,7 @@
   align-items: center;
 
   .item {
-    & + .item {
+    &+.item {
       margin-left: 20px;
     }
   }
@@ -55,6 +55,9 @@
   grid-gap: 5px 10px;
 
   dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #333;
     border-radius: 3px;
     font-size: 13px;
@@ -73,16 +76,17 @@ G-navi
   top: 0;
   z-index: 10;
 
-  > ul {
+  >ul {
     color: #fff;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1024px;
     width: 90%;
 
-    > li {
-      > a {
+    >li {
+      >a {
         line-height: 100px;
+
         &::after {
           content: "";
           background: #fff;
@@ -91,6 +95,7 @@ G-navi
     }
   }
 }
+
 .dropdown-nav {
   z-index: 10;
 }
@@ -112,6 +117,7 @@ Header
   .h-contents {
     display: none;
   }
+
   /*------------
 Hero01
 --------------*/
@@ -126,10 +132,12 @@ Hero01
       top: initial;
     }
   }
+
   .hero01 {
     .hero-ttl {
       bottom: 30px;
     }
+
     .hero-bg {
       height: 45vh;
     }
@@ -148,6 +156,7 @@ Hero03
     .hero-bg {
       height: 45vh;
     }
+
     .hero-ttl {
       bottom: 30px;
     }
@@ -155,9 +164,10 @@ Hero03
 
 
   .site-map {
-    > ul {
-      > li {
+    >ul {
+      >li {
         width: 49%;
+
         ul {
           li {
             width: 49%;
