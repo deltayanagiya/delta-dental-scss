@@ -57,12 +57,12 @@ jobs:
       - name: Move compiled CSS to path within feature branch
         run: mv /tmp/assets/ assets/
 
-      - name: Add and Commit changes to feature branch
-        run: |
-          git config --local user.email ${{ secrets.MY_EMAIL }}
-          git config --local user.name 'deltayanagiya'
-          git add .
-          git commit -m 'Updates compiled CSS files'
+      # - name: Add and Commit changes to feature branch
+      #   run: |
+      #     git config --local user.email ${{ secrets.MY_EMAIL }}
+      #     git config --local user.name 'deltayanagiya'
+      #     git add .
+      #     git commit -m 'Updates compiled CSS files'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
