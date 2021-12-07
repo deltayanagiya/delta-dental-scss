@@ -27,7 +27,10 @@ Common
 
 //Font style
 .bold,
-strong {}
+strong {
+  font-weight: bold;
+}
+
 
 .red {
   color: #F44336;
