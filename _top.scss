@@ -26,17 +26,17 @@ Header
 G-navi
 --------------*/
 .pc-navi {
-  > ul {
+  >ul {
     font-family: $font01;
     display: flex;
     align-items: center;
 
-    > li {
+    >li {
       display: flex;
       align-items: center;
       white-space: nowrap;
 
-      > a {
+      >a {
         display: inline-block;
         cursor: pointer;
         transition: 0.5s;
@@ -195,7 +195,7 @@ G-navi
     position: relative;
     transition: 0.5s;
 
-    & + .item {
+    &+.item {
       margin-top: 10px;
     }
 
@@ -230,12 +230,12 @@ G-navi
   .txt {
     font-size: 12px;
     text-align: center;
-    margin-bottom: 10px;
   }
 
   .wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
   }
 
   .btn {
@@ -304,6 +304,7 @@ Hero01
 --------------*/
 .hero01 {
   display: block;
+
   .hero-bg {
     height: 100%;
     width: 100%;
@@ -489,7 +490,7 @@ Hero03
     text-align: left;
     padding-bottom: 15px;
 
-    & + li {
+    &+li {
       margin-top: 15px;
     }
   }
@@ -575,6 +576,7 @@ Hero03
 }
 
 @media all and (-ms-high-contrast: none) {
+
   .slide-start.l,
   .slide-start.r,
   .slide-start.z {
@@ -659,7 +661,8 @@ main {
   padding: 7px 10px 7px 25px;
 }
 
-.u-btn + .u-btn {
+.t-btn+.t-btn,
+.u-btn+.u-btn {
   margin-left: 15px;
 }
 
@@ -811,7 +814,7 @@ main {
     width: 32.22%;
   }
 
-  > li {
+  >li {
     border: 1px solid #eeeeee;
     width: 32.22%;
   }
@@ -903,9 +906,7 @@ main {
 
   li {
     text-align: center;
-    width: calc(
-      100% / 5 - 15px
-    ); //カラム数によって5の部分の数値を変更してください。
+    width: calc(100% / 5 - 15px); //カラム数によって5の部分の数値を変更してください。
     margin: 0 7.5px;
 
     &:nth-child(n + 6) {
@@ -920,6 +921,17 @@ main {
     height: 100%;
     padding: 40px 20px;
     transition: 0.5s;
+    position: relative;
+
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 0 0 13px 13px;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
 
     &:hover {
       background: rgba(#fff, 0.1);
@@ -1010,7 +1022,7 @@ main {
   .l-desc {
     flex: 1;
 
-    p + p {
+    p+p {
       margin-top: 15px;
     }
   }
@@ -1091,7 +1103,7 @@ main {
   display: flex;
   justify-content: space-between;
 
-  > .item {
+  >.item {
     width: 48%;
   }
 }
@@ -1219,7 +1231,7 @@ main {
     font-size: 12px;
     line-height: 1;
 
-    + .category::before {
+    +.category::before {
       content: "/";
       margin: 0 5px;
     }
@@ -1373,7 +1385,7 @@ Footer
   margin-bottom: 25px;
 
   li {
-    & + li {
+    &+li {
       margin-left: 15px;
     }
   }
@@ -1392,13 +1404,13 @@ Footer
   display: flex;
   justify-content: flex-end;
 
-  > ul {
-    & + ul {
+  >ul {
+    &+ul {
       margin-left: 50px;
     }
 
-    > li {
-      & + li {
+    >li {
+      &+li {
         margin-top: 5px;
       }
 
@@ -1463,6 +1475,7 @@ Footer
 }
 
 @media only screen and (max-width: 800px) {
+
   /*------------
 Header
 --------------*/
@@ -1647,12 +1660,12 @@ G-navi
     border-top: 1px solid #d6d6d6;
     margin: 0 0 30px;
 
-    > li {
+    >li {
       border-bottom: 1px solid #d6d6d6;
     }
 
-    > li {
-      > a {
+    >li {
+      >a {
         color: #333;
         display: block;
         font-size: 14px;
@@ -1693,7 +1706,7 @@ G-navi
           }
         }
 
-        > a {
+        >a {
           padding: 15px 0;
           width: 85%;
         }
@@ -1703,8 +1716,8 @@ G-navi
     .child {
       padding: 0 0 15px;
 
-      > ul {
-        > li {
+      >ul {
+        >li {
           position: relative;
           padding-left: 15px;
 
@@ -1716,7 +1729,7 @@ G-navi
             top: 0;
           }
 
-          > a {
+          >a {
             font-size: 13px;
             font-weight: bold;
           }
@@ -1727,7 +1740,7 @@ G-navi
 
   .sp-navi-other {
     .item {
-      & + .item {
+      &+.item {
         margin: 25px 0 0;
       }
     }
@@ -1795,6 +1808,7 @@ Hero01
 --------------*/
   .hero01 {
     display: block;
+
     .hero-bg {
       .slick-dots {
         display: none !important;
@@ -1921,7 +1935,8 @@ Top contents
     min-width: 0;
   }
 
-  .u-btn + .u-btn {
+  .t-btn+.t-btn,
+  .u-btn+.u-btn {
     margin: 15px 0 0;
   }
 
@@ -2010,10 +2025,10 @@ Top contents
   .sec01-list {
     display: block;
 
-    > li {
+    >li {
       width: 100%;
 
-      & + li {
+      &+li {
         margin-top: 30px;
       }
     }
@@ -2145,7 +2160,7 @@ Top contents
     .item {
       width: 100%;
 
-      & + .item {
+      &+.item {
         margin-top: 30px;
       }
     }
@@ -2179,10 +2194,10 @@ Top contents
   .sec05-wrapper {
     display: block;
 
-    > .item {
+    >.item {
       width: 100%;
 
-      & + .item {
+      &+.item {
         margin-top: 50px;
       }
     }
@@ -2305,7 +2320,7 @@ Top contents
       display: block;
       padding-bottom: 0;
 
-      & + li {
+      &+li {
         margin-top: 5px;
       }
     }
@@ -2325,22 +2340,22 @@ Top contents
     }
   }
 
-    .inner {
-      text-align: center;
-    }
+  .inner {
+    text-align: center;
+  }
 
-    .address {
-      margin-bottom: 10px;
-    }
+  .address {
+    margin-bottom: 10px;
+  }
 
-    .tel {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
+  .tel {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 
-    .l-dl {
-      text-align: left;
-    }
+  .l-dl {
+    text-align: left;
+  }
 
   /*------------
 Footer
@@ -2383,16 +2398,16 @@ Footer
   .site-map {
     display: block;
 
-    > ul {
+    >ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      & + ul {
+      &+ul {
         margin: 15px 0 0;
       }
 
-      > li {
+      >li {
         width: 49%;
         margin-bottom: 5px;
 
@@ -2400,7 +2415,7 @@ Footer
           width: 100%;
         }
 
-        & + li {
+        &+li {
           margin-top: 0;
         }
 
