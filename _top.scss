@@ -1812,6 +1812,8 @@ Hero01
     display: block;
 
     .hero-bg {
+      height: 40vh;
+
       .slick-dots {
         display: none !important;
       }
@@ -1819,7 +1821,8 @@ Hero01
 
     .hero-ttl {
       padding: 0 5vw;
-      top: inherit;
+      top: auto;
+      bottom: 30px;
       left: 0;
       transform: translateY(0);
 
