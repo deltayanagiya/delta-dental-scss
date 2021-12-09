@@ -1809,8 +1809,6 @@ Hero
 Hero01
 --------------*/
   .hero01 {
-    display: block;
-
     .hero-bg {
       height: 40vh;
 
@@ -1842,8 +1840,7 @@ Hero01
 Hero02
 --------------*/
   .hero02 {
-    display: block;
-    height: auto;
+    height: 40vh;
 
     &::before {
       background: #f1f1f1;
