@@ -7,6 +7,7 @@ Header
 .header {
   background: #fff;
   width: 100%;
+  height: 100px;
 }
 
 .h-wrapper {
@@ -26,17 +27,17 @@ Header
 G-navi
 --------------*/
 .pc-navi {
-  > ul {
+  >ul {
     font-family: $font01;
     display: flex;
     align-items: center;
 
-    > li {
+    >li {
       display: flex;
       align-items: center;
       white-space: nowrap;
 
-      > a {
+      >a {
         display: inline-block;
         cursor: pointer;
         transition: 0.5s;
@@ -195,7 +196,7 @@ G-navi
     position: relative;
     transition: 0.5s;
 
-    & + .item {
+    &+.item {
       margin-top: 10px;
     }
 
@@ -230,12 +231,12 @@ G-navi
   .txt {
     font-size: 12px;
     text-align: center;
-    margin-bottom: 10px;
   }
 
   .wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
   }
 
   .btn {
@@ -294,7 +295,9 @@ G-navi
 /*------------
 Hero
 --------------*/
+
 .hero {
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -303,7 +306,7 @@ Hero
 Hero01
 --------------*/
 .hero01 {
-  display: block;
+
   .hero-bg {
     height: 100%;
     width: 100%;
@@ -479,89 +482,6 @@ Hero03
   }
 }
 
-
-.list-top-news {
-  font-size: 15px;
-
-  li {
-    display: flex;
-    border-bottom: 1px solid #dfdfdf;
-    text-align: left;
-    padding-bottom: 15px;
-
-    & + li {
-      margin-top: 15px;
-    }
-  }
-
-  time {
-    display: inline-block;
-    color: #888;
-    width: 90px;
-    margin-right: 25px;
-  }
-
-  a {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-family: $font01;
-    max-width: 630px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.sec08 {
-  background: #f5f5f5;
-  padding: 60px 0;
-}
-
-.sec08-layout {
-  display: flex;
-  position: relative;
-  min-height: 170px;
-
-  .l-intro {
-    width: 25.48%;
-  }
-
-  .l-desc {
-    flex: 1;
-  }
-
-  .l-ttl {
-    line-height: 1.5;
-
-    .txt01 {
-      display: block;
-      font-family: $font02;
-      font-size: 35px;
-      letter-spacing: 0.1em;
-      margin-bottom: 10px;
-    }
-
-    .txt02 {
-      display: block;
-      font-family: $font01;
-      font-size: 16px;
-    }
-
-    &.white {
-      color: #fff;
-    }
-  }
-
-  .l-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
-
 .slide-start.l {
   animation: slide-left 15s linear forwards;
 }
@@ -575,6 +495,7 @@ Hero03
 }
 
 @media all and (-ms-high-contrast: none) {
+
   .slide-start.l,
   .slide-start.r,
   .slide-start.z {
@@ -583,33 +504,187 @@ Hero03
   }
 }
 
-@keyframes slide-left {
-  0% {
-    transform: scale(1.1) translateX(0);
+/*------------
+Hero04
+--------------*/
+.hero04 {
+  position: relative;
+  margin-top: 100px;
+
+  .hero-bg {
+    width: 100%;
+    height: calc(100vh - 100px);
+
+    video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
   }
 
-  100% {
-    transform: scale(1.1) translateX(-50px);
+  .hero-ttl {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    .ttl {
+      font-family: $font01;
+      font-weight: bold;
+      font-size: 65px;
+      line-height: 1.4;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .txt {
+      font-family: $font01;
+      font-size: 20px;
+    }
   }
+
 }
 
-@keyframes slide-right {
-  0% {
-    transform: scale(1.1) translateX(0);
+@media (max-width: 800px) {
+
+  /*------------
+Hero
+--------------*/
+  .hero {
+    height: auto;
   }
 
-  100% {
-    transform: scale(1.1) translateX(50px);
-  }
-}
+  /*------------
+Hero01
+--------------*/
+  .hero01 {
+    .hero-bg {
+      height: 40vh;
 
-@keyframes slide-zoom {
-  0% {
-    transform: scale(1);
+      .slick-dots {
+        display: none !important;
+      }
+    }
+
+    .hero-ttl {
+      padding: 0 5vw;
+      top: auto;
+      bottom: 30px;
+      left: 0;
+      transform: translateY(0);
+
+      .ttl {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .txt {
+        font-size: 13px;
+      }
+    }
   }
 
-  100% {
-    transform: scale(1.2);
+  /*------------
+Hero02
+--------------*/
+  .hero02 {
+    height: 40vh;
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .hero-bg {
+      margin: 0;
+      width: 100%;
+
+      .slick-dots {
+        display: none !important;
+      }
+    }
+
+    .hero-ttl {
+      padding: 0 5vw;
+      left: 0;
+      transform: translateY(0);
+
+      .ttl {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .txt {
+        font-size: 13px;
+      }
+
+      .txt-en {
+        font-size: 30px;
+        top: -30px;
+        left: 0;
+      }
+    }
+  }
+
+  /*------------
+Hero03
+--------------*/
+  .hero03 {
+    .hero-ttl {
+      padding: 0 5vw;
+      top: inherit;
+      left: 0;
+      transform: translateY(0);
+
+      .ttl {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .txt {
+        font-size: 13px;
+      }
+    }
+  }
+
+  /*------------
+Hero04
+--------------*/
+  .hero04 {
+    margin-top: 0;
+
+    .hero-bg {
+      height: 40vh;
+    }
+
+    .hero-ttl {
+      padding: 0 5vw;
+      top: auto;
+      bottom: 30px;
+      left: 0;
+      transform: translateY(0);
+
+      .ttl {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .txt {
+        font-size: 13px;
+      }
+    }
   }
 }
 
@@ -659,7 +734,8 @@ main {
   padding: 7px 10px 7px 25px;
 }
 
-.u-btn + .u-btn {
+.t-btn+.t-btn,
+.u-btn+.u-btn {
   margin-left: 15px;
 }
 
@@ -811,7 +887,7 @@ main {
     width: 32.22%;
   }
 
-  > li {
+  >li {
     border: 1px solid #eeeeee;
     width: 32.22%;
   }
@@ -903,9 +979,7 @@ main {
 
   li {
     text-align: center;
-    width: calc(
-      100% / 5 - 15px
-    ); //カラム数によって5の部分の数値を変更してください。
+    width: calc(100% / 5 - 15px); //カラム数によって5の部分の数値を変更してください。
     margin: 0 7.5px;
 
     &:nth-child(n + 6) {
@@ -920,6 +994,17 @@ main {
     height: 100%;
     padding: 40px 20px;
     transition: 0.5s;
+    position: relative;
+
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 0 0 13px 13px;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
 
     &:hover {
       background: rgba(#fff, 0.1);
@@ -1010,7 +1095,7 @@ main {
   .l-desc {
     flex: 1;
 
-    p + p {
+    p+p {
       margin-top: 15px;
     }
   }
@@ -1091,7 +1176,7 @@ main {
   display: flex;
   justify-content: space-between;
 
-  > .item {
+  >.item {
     width: 48%;
   }
 }
@@ -1219,7 +1304,7 @@ main {
     font-size: 12px;
     line-height: 1;
 
-    + .category::before {
+    +.category::before {
       content: "/";
       margin: 0 5px;
     }
@@ -1229,6 +1314,88 @@ main {
 .sec07 {
   background: #f5f5f5;
   padding: 60px 0;
+}
+
+.sec08 {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+
+.sec08-layout {
+  display: flex;
+  position: relative;
+  min-height: 170px;
+
+  .l-intro {
+    width: 25.48%;
+  }
+
+  .l-desc {
+    flex: 1;
+  }
+
+  .l-ttl {
+    line-height: 1.5;
+
+    .txt01 {
+      display: block;
+      font-family: $font02;
+      font-size: 35px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .txt02 {
+      display: block;
+      font-family: $font01;
+      font-size: 16px;
+    }
+
+    &.white {
+      color: #fff;
+    }
+  }
+
+  .l-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.list-top-news {
+  font-size: 15px;
+
+  li {
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    padding-bottom: 15px;
+
+    &+li {
+      margin-top: 15px;
+    }
+  }
+
+  time {
+    display: inline-block;
+    color: #888;
+    width: 90px;
+    margin-right: 25px;
+  }
+
+  a {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: $font01;
+    max-width: 630px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .map-layout {
@@ -1373,7 +1540,7 @@ Footer
   margin-bottom: 25px;
 
   li {
-    & + li {
+    &+li {
       margin-left: 15px;
     }
   }
@@ -1392,13 +1559,13 @@ Footer
   display: flex;
   justify-content: flex-end;
 
-  > ul {
-    & + ul {
+  >ul {
+    &+ul {
       margin-left: 50px;
     }
 
-    > li {
-      & + li {
+    >li {
+      &+li {
         margin-top: 5px;
       }
 
@@ -1463,6 +1630,7 @@ Footer
 }
 
 @media only screen and (max-width: 800px) {
+
   /*------------
 Header
 --------------*/
@@ -1647,12 +1815,12 @@ G-navi
     border-top: 1px solid #d6d6d6;
     margin: 0 0 30px;
 
-    > li {
+    >li {
       border-bottom: 1px solid #d6d6d6;
     }
 
-    > li {
-      > a {
+    >li {
+      >a {
         color: #333;
         display: block;
         font-size: 14px;
@@ -1693,7 +1861,7 @@ G-navi
           }
         }
 
-        > a {
+        >a {
           padding: 15px 0;
           width: 85%;
         }
@@ -1703,8 +1871,8 @@ G-navi
     .child {
       padding: 0 0 15px;
 
-      > ul {
-        > li {
+      >ul {
+        >li {
           position: relative;
           padding-left: 15px;
 
@@ -1716,7 +1884,7 @@ G-navi
             top: 0;
           }
 
-          > a {
+          >a {
             font-size: 13px;
             font-weight: bold;
           }
@@ -1727,7 +1895,7 @@ G-navi
 
   .sp-navi-other {
     .item {
-      & + .item {
+      &+.item {
         margin: 25px 0 0;
       }
     }
@@ -1783,119 +1951,6 @@ G-navi
     display: none;
   }
 
-  /*------------
-Hero
---------------*/
-  .hero {
-    height: auto;
-  }
-
-  /*------------
-Hero01
---------------*/
-  .hero01 {
-    display: block;
-    .hero-bg {
-      .slick-dots {
-        display: none !important;
-      }
-    }
-
-    .hero-ttl {
-      padding: 0 5vw;
-      top: inherit;
-      left: 0;
-      transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
-    }
-  }
-
-  /*------------
-Hero02
---------------*/
-  .hero02 {
-    display: block;
-    height: auto;
-
-    &::before {
-      background: #f1f1f1;
-      content: "";
-      display: block;
-      height: 100vh;
-      width: 25vw;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: -1;
-    }
-
-    .wrapper {
-      width: 100%;
-    }
-
-    .hero-bg {
-      margin: 0;
-      width: 100%;
-
-      .slick-dots {
-        display: none !important;
-      }
-    }
-
-    .hero-ttl {
-      padding: 0 5vw;
-      top: inherit;
-      left: 0;
-      transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
-
-      .txt-en {
-        font-size: 30px;
-        top: -30px;
-        left: 0;
-      }
-    }
-  }
-
-  /*------------
-Hero03
---------------*/
-  .hero03 {
-    .hero-ttl {
-      padding: 0 5vw;
-      top: inherit;
-      left: 0;
-      transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
-    }
-  }
 
   /*------------
 Top contents
@@ -1921,7 +1976,8 @@ Top contents
     min-width: 0;
   }
 
-  .u-btn + .u-btn {
+  .t-btn+.t-btn,
+  .u-btn+.u-btn {
     margin: 15px 0 0;
   }
 
@@ -2010,10 +2066,10 @@ Top contents
   .sec01-list {
     display: block;
 
-    > li {
+    >li {
       width: 100%;
 
-      & + li {
+      &+li {
         margin-top: 30px;
       }
     }
@@ -2145,7 +2201,7 @@ Top contents
     .item {
       width: 100%;
 
-      & + .item {
+      &+.item {
         margin-top: 30px;
       }
     }
@@ -2179,10 +2235,10 @@ Top contents
   .sec05-wrapper {
     display: block;
 
-    > .item {
+    >.item {
       width: 100%;
 
-      & + .item {
+      &+.item {
         margin-top: 50px;
       }
     }
@@ -2247,31 +2303,6 @@ Top contents
     padding: 50px 0;
   }
 
-  .map-layout {
-    iframe {
-      vertical-align: bottom;
-      height: 250px;
-    }
-
-    .l-desc {
-      padding: 50px 5vw;
-      position: static;
-      transform: translateY(0);
-    }
-
-    .l-logo {
-      align-items: flex-start;
-      justify-content: center;
-      margin-bottom: 25px;
-
-      .logo {
-        width: 250px;
-      }
-    }
-
-  }
-
-
   .sec08 {
     padding: 50px 0;
   }
@@ -2305,25 +2336,42 @@ Top contents
       display: block;
       padding-bottom: 0;
 
-      & + li {
+      &+li {
         margin-top: 5px;
       }
     }
 
     time {
+      display: block;
       font-size: 12px;
-      margin-right: 10px;
-
-      &::after {
-        margin: 0 0 0 10px;
-        vertical-align: 1px;
-      }
     }
 
     a {
       max-width: 100%;
     }
   }
+
+  .map-layout {
+    iframe {
+      vertical-align: bottom;
+      height: 250px;
+    }
+
+    .l-desc {
+      padding: 50px 5vw;
+      position: static;
+      transform: translateY(0);
+    }
+
+    .l-logo {
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 25px;
+
+      .logo {
+        width: 250px;
+      }
+    }
 
     .inner {
       text-align: center;
@@ -2341,6 +2389,8 @@ Top contents
     .l-dl {
       text-align: left;
     }
+
+  }
 
   /*------------
 Footer
@@ -2383,16 +2433,16 @@ Footer
   .site-map {
     display: block;
 
-    > ul {
+    >ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      & + ul {
+      &+ul {
         margin: 15px 0 0;
       }
 
-      > li {
+      >li {
         width: 49%;
         margin-bottom: 5px;
 
@@ -2400,7 +2450,7 @@ Footer
           width: 100%;
         }
 
-        & + li {
+        &+li {
           margin-top: 0;
         }
 

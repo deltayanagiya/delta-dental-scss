@@ -2,10 +2,40 @@
 Animation
 -----------------------------------------------------------*/
 
+@keyframes slide-left {
+  0% {
+    transform: scale(1.1) translateX(0);
+  }
+
+  100% {
+    transform: scale(1.1) translateX(-50px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: scale(1.1) translateX(0);
+  }
+
+  100% {
+    transform: scale(1.1) translateX(50px);
+  }
+}
+
+@keyframes slide-zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
 .fade-in {
   will-change: transform;
   opacity: 0;
-  transition: transform 1.8s cubic-bezier(.19,1,.435,.99),opacity .8s cubic-bezier(.19,1,.435,.99);
+  transition: transform 1.8s cubic-bezier(.19, 1, .435, .99), opacity .8s cubic-bezier(.19, 1, .435, .99);
   transform: translateY(100px);
   opacity: 0;
 }

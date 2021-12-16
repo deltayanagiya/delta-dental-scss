@@ -100,15 +100,6 @@ G-navi
   z-index: 10;
 }
 
-/*------------
-Hero
---------------*/
-.hero {
-  height: calc(100vh - 100px);
-}
-
-
-
 @media only screen and (max-width: 800px) {
   /*------------
 Header
@@ -118,62 +109,4 @@ Header
     display: none;
   }
 
-  /*------------
-Hero01
---------------*/
-  .hero {
-    height: auto;
-  }
-
-  .hero01,
-  .hero02,
-  .hero03 {
-    .hero-ttl {
-      top: initial;
-    }
-  }
-
-  .hero01 {
-    .hero-ttl {
-      bottom: 30px;
-    }
-
-    .hero-bg {
-      height: 45vh;
-    }
-  }
-
-  .hero02 {
-    .hero-ttl {
-      bottom: 30px;
-    }
-  }
-
-  /*------------
-Hero03
---------------*/
-  .hero03 {
-    .hero-bg {
-      height: 45vh;
-    }
-
-    .hero-ttl {
-      bottom: 30px;
-    }
-  }
-
-
-  .site-map {
-    >ul {
-      >li {
-        width: 49%;
-
-        ul {
-          li {
-            width: 49%;
-          }
-        }
-      }
-    }
-  }
 }

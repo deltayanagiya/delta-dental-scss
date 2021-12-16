@@ -31,7 +31,6 @@ strong {
   font-weight: bold;
 }
 
-
 .red {
   color: #F44336;
 }
@@ -59,7 +58,7 @@ strong {
   margin-bottom: 0 !important;
 }
 
-.mb5 {
+.mbXS {
   margin-bottom: 5px !important;
 }
 
@@ -114,16 +113,64 @@ strong {
 }
 
 //Video
-.video {
+.youtube {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
 }
 
-.video iframe {
+.youtube iframe {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .sp-tac {
+    text-align: center !important;
+  }
+
+  .sp-tar {
+    text-align: right !important;
+  }
+
+  .sp-tal {
+    text-align: left !important;
+  }
+
+  .mbL {
+    margin-bottom: 30px !important;
+  }
+
+  .mbXL {
+    margin-bottom: 50px !important;
+  }
+
+  .sp-map {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .sp-map iframe,
+  .sp-map object,
+  .sp-map embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
