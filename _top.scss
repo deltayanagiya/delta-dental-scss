@@ -511,6 +511,9 @@ Hero04
   position: relative;
   margin-top: 100px;
 
+  &.no-margin-top{
+    margin-top: 0;
+  }
   .hero-bg {
     width: 100%;
     height: calc(100vh - 100px);
