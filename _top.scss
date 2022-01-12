@@ -511,9 +511,10 @@ Hero04
   position: relative;
   margin-top: 100px;
 
-  &.no-margin-top{
+  &.no-margin-top {
     margin-top: 0;
   }
+
   .hero-bg {
     width: 100%;
     height: calc(100vh - 100px);
@@ -1109,11 +1110,11 @@ main {
   padding: 70px 0;
 }
 
-.sec04-layout {
+.sec04-list {
   display: flex;
   justify-content: space-between;
 
-  .item {
+  >li {
     width: 49.02%;
   }
 
@@ -1122,10 +1123,21 @@ main {
     height: 100%;
     background: #fff;
     border: 1px solid #eee;
+    position: relative;
     transition: 0.5s;
 
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 0 0 13px 13px;
+      border-color: transparent transparent #37414f transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
     &:hover {
-      .item-img {
+      .list-img {
         img {
           transform: scale(1.1);
         }
@@ -1133,7 +1145,7 @@ main {
     }
   }
 
-  .item-img {
+  .list-img {
     text-align: center;
     margin-bottom: 30px;
     overflow: hidden;
@@ -1143,11 +1155,11 @@ main {
     }
   }
 
-  .item-desc {
+  .list-desc {
     padding: 20px 40px 30px;
   }
 
-  .item-ttl {
+  .list-ttl {
     line-height: 1;
     text-align: center;
     margin-bottom: 20px;
@@ -2198,26 +2210,26 @@ Top contents
     padding: 50px 0;
   }
 
-  .sec04-layout {
+  .sec04-list {
     display: block;
 
-    .item {
+    >li {
       width: 100%;
 
-      &+.item {
+      &+li {
         margin-top: 30px;
       }
     }
 
-    .item-img {
+    .list-img {
       margin-bottom: 30px;
     }
 
-    .item-desc {
+    .list-desc {
       padding: 0 20px 30px;
     }
 
-    .item-ttl {
+    .list-ttl {
       margin-bottom: 15px;
 
       .txt01 {

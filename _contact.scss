@@ -112,6 +112,7 @@
     font-size: 16px;
     padding: 10px;
     width: 100%;
+    min-height: 44px;
   }
 
   select::-ms-expand {
@@ -151,7 +152,6 @@
       right: 15px;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 10;
     }
   }
 
@@ -290,7 +290,7 @@
 
   //生年月日
   .preferred-date {
-    overflow: hidden;
+    display: flow-root;
 
     .date {
       width: 45%;
@@ -433,7 +433,6 @@
     }
 
     .preferred-date {
-      overflow: hidden;
 
       .date {
         width: 100%;
