@@ -351,35 +351,35 @@
 }
 
 /*送信ボタン*/
-.submit-btn {
+.contact-form {
   .submit-btn {
     display: flex;
     justify-content: center;
-  }
 
-  .submit-btn [type="submit"] {
-    -webkit-appearance: none;
-    background: #419caf;
-    border: 1px solid #419caf;
-    border-radius: 0;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 22px 40px;
-    letter-spacing: 3px;
-    transition: 0.3s;
-    width: 250px;
-  }
+    [type="submit"] {
+      -webkit-appearance: none;
+      background: #419caf;
+      border: 1px solid #419caf;
+      border-radius: 0;
+      outline: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 22px 40px;
+      letter-spacing: 3px;
+      transition: 0.3s;
+      width: 250px;
+    }
 
-  .submit-btn [type="submit"]:hover {
-    opacity: 0.7;
-  }
+    [type="submit"]:hover {
+      opacity: 0.7;
+    }
 
-  .submit-btn [type="submit"].back-btn {
-    background: #999;
-    border: none;
-    margin-right: 50px;
+    [type="submit"].back-btn {
+      background: #999;
+      border: none;
+      margin-right: 50px;
+    }
   }
 }
 
