@@ -244,8 +244,8 @@
 }
 
 /*select*/
-.contact-form select {
-  &::-ms-expand {
+.contact-form {
+  select::-ms-expand {
     display: none;
   }
 
