@@ -80,6 +80,51 @@
   }
 }
 
+/*------------
+個人情報保護方針
+--------------*/
+.dl-privacy {
+  dt {
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    padding: 0 0 5px;
+    margin: 0 0 15px;
+  }
+
+  dd {
+    &+dt {
+      margin-top: 30px;
+    }
+  }
+}
+
+.list-privacy {
+  li {
+    position: relative;
+    padding: 0 0 0 15px;
+
+    &+li {
+      margin-top: 3px;
+    }
+
+    &:before {
+      background: #333;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+/*----------------------
+contact form 7
+----------------------*/
+
 .contact-form {
   table {
     border-collapse: collapse;
@@ -94,6 +139,7 @@
       padding: 20px 40px 20px 0;
       vertical-align: middle;
       font-weight: bold;
+      text-align: left;
       width: 30%;
     }
 
@@ -102,6 +148,10 @@
       width: 70%;
     }
 
+  }
+
+  .small {
+    font-size: 0.8rem;
   }
 
   .hissu {
@@ -124,7 +174,7 @@
   textarea {
     -webkit-appearance: none;
     appearance: none;
-    background: #f1f1f1;
+    background: #fff;
     border: none;
     border-radius: 2px;
     color: #333;
@@ -160,12 +210,13 @@
 
   label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     font-size: 16px;
   }
 
   input[type=radio] {
+    flex: 0 0 18px;
     display: inline-block;
     background-color: #eeeff2;
     border: 1px solid #d6d9e0;
@@ -174,7 +225,7 @@
     border-radius: 50px;
     -webkit-appearance: none;
     appearance: none;
-    margin: 0 10px 0 0;
+    margin: 6px 10px 0 0;
   }
 
   input[type=radio]:checked+span::before {
@@ -185,9 +236,8 @@
     background: #333;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
+    top: 11px;
     left: 5px;
-    transform: translateY(-50%);
     z-index: 0;
   }
 
@@ -206,12 +256,13 @@
 
   label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     font-size: 16px;
   }
 
   input[type=checkbox] {
+    flex: 0 0 18px;
     display: inline-block;
     background-color: #eeeff2;
     border: 1px solid #d6d9e0;
@@ -220,7 +271,7 @@
     height: 18px;
     -webkit-appearance: none;
     appearance: none;
-    margin: 0 10px 0 0;
+    margin: 6px 10px 0 0;
   }
 
   input[type=checkbox]:checked+span::before {
@@ -256,15 +307,15 @@
       pointer-events: none;
       position: absolute;
       right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 22px;
     }
   }
 }
 
 /*file*/
 .file-label {
-  background-color: #f1f1f1;
+  display: inline-block;
+  background-color: #fff;
   cursor: pointer;
   color: #333;
   font-size: 13px;
@@ -297,27 +348,24 @@
 /*希望日*/
 .contact-form {
   .reserve-date {
-    display: flow-root;
+    display: flex;
   }
 
   .reserve-date .date {
-    width: 45%;
-    float: left;
+    width: 35%;
+    margin-right: 15px;
   }
 
   .reserve-date .time {
     display: flex;
-    align-items: center;
-    float: right;
-    width: 50%;
   }
 
-  .reserve-date .time select {
-    width: 80px;
+  .reserve-date .time .select-wrap {
+    width: 100px;
   }
 
   .reserve-date .unit {
-    margin: 0 10px;
+    margin: 10px 10px 0;
   }
 }
 
@@ -325,16 +373,20 @@
 .contact-form {
   .birth {
     display: flex;
-    align-items: center;
+
+    .item {
+      display: flex;
+    }
+
+    .select-wrap {
+      width: 100px;
+    }
+
+    .unit {
+      margin: 10px 10px 0;
+    }
   }
 
-  .birth select {
-    width: 75px;
-  }
-
-  .birth .unit {
-    margin: 0 10px;
-  }
 }
 
 /*学歴*/
@@ -401,6 +453,17 @@
   display: inline-block;
   padding: 2px 10px;
   margin: 10px 10px 0 0;
+  position: relative;
+
+  &::before {
+    border-style: solid;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent #E35C5C transparent;
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -5px;
+  }
 }
 
 div.wpcf7-response-output.wpcf7-validation-errors {
@@ -449,6 +512,59 @@ div.wpcf7-response-output.wpcf7-validation-errors {
   }
 }
 
+/*送信中*/
+.loading-send {
+  background: #fff;
+  padding: 35px 70px;
+  box-shadow: 0 0.4rem 0.8rem -0.1rem rgb(0 32 128 / 10%), 0 0 0 1px #f0f2f7;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.loading-send-dot,
+.loading-send-dot::before,
+.loading-send-dot::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9FACE6;
+  position: absolute;
+  top: 0;
+  -webkit-animation: dot-flashing 1s infinite alternate;
+  animation: dot-flashing 1s infinite alternate;
+}
+
+.loading-send-dot {
+  margin-top: 5px;
+  position: relative;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+.loading-send-dot::before {
+  left: -15px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.loading-send-dot::after {
+  left: 15px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
 @media (max-width: 800px) {
   .contact-form {
     table {
@@ -470,14 +586,19 @@ div.wpcf7-response-output.wpcf7-validation-errors {
     }
 
     .reserve-date {
+      display: block;
+
       .date {
         width: 100%;
-        float: none;
         margin: 0 0 10px;
       }
+    }
 
-      .time {
-        width: 100%;
+    .contact-form .birth {
+      flex-wrap: wrap;
+
+      .item+.item {
+        margin-top: 15px;
       }
     }
 
@@ -493,46 +614,5 @@ div.wpcf7-response-output.wpcf7-validation-errors {
 
   .grecaptcha-badge {
     bottom: 70px !important;
-  }
-}
-
-/*------------
-個人情報保護方針
---------------*/
-.dl-privacy {
-  dt {
-    border-bottom: 1px solid #000;
-    font-size: 18px;
-    padding: 0 0 5px;
-    margin: 0 0 15px;
-  }
-
-  dd {
-    &+dt {
-      margin-top: 30px;
-    }
-  }
-}
-
-.list-privacy {
-  li {
-    position: relative;
-    padding: 0 0 0 15px;
-
-    &+li {
-      margin-top: 3px;
-    }
-
-    &:before {
-      background: #333;
-      border-radius: 50%;
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 5px;
-      height: 5px;
-    }
   }
 }
