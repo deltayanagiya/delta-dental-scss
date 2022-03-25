@@ -28,6 +28,11 @@ jobs:
           source: ./style.scss
           destination: /tmp/assets/css/style.css
 
+      - name: Compile CSS from SCSS files contact.css
+        uses: gha-utilities/sass-build@v0.4.7
+        with:
+          source: ./contact.scss
+          destination: /tmp/assets/css/contact.css
 
 
       - uses: actions/setup-node@v1
