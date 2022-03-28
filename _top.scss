@@ -296,16 +296,13 @@ G-navi
 Hero
 --------------*/
 
-.hero {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
 /*------------
 Hero01
 --------------*/
 .hero01 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 
   .hero-bg {
     height: 100%;
@@ -360,6 +357,9 @@ Hero01
 Hero02
 --------------*/
 .hero02 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,6 +433,10 @@ Hero02
 Hero03
 --------------*/
 .hero03 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
   .hero-bg {
     height: 100%;
     width: 100%;
@@ -508,6 +512,9 @@ Hero03
 Hero04
 --------------*/
 .hero04 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
   position: relative;
   margin-top: 100px;
 
@@ -558,19 +565,22 @@ Hero04
 
 }
 
+/*------------
+Hero05
+--------------*/
+
 @media (max-width: 800px) {
 
   /*------------
 Hero
 --------------*/
-  .hero {
-    height: auto;
-  }
 
   /*------------
 Hero01
 --------------*/
   .hero01 {
+    height: auto;
+
     .hero-bg {
       height: 40vh;
 
@@ -602,7 +612,7 @@ Hero01
 Hero02
 --------------*/
   .hero02 {
-    height: 45vh;
+    height: auto;
 
     .wrapper {
       width: 100%;
@@ -644,6 +654,8 @@ Hero02
 Hero03
 --------------*/
   .hero03 {
+    height: auto;
+
     .hero-ttl {
       padding: 0 5vw;
       top: inherit;
@@ -666,6 +678,7 @@ Hero03
 Hero04
 --------------*/
   .hero04 {
+    height: auto;
     margin-top: 0;
 
     .hero-bg {
