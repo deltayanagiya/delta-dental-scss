@@ -560,7 +560,8 @@ Hero
 
     .hero-catch {
       padding: 0 5vw;
-      top: inherit;
+      top: auto;
+      bottom: 30px;
       left: 0;
       transform: translateY(0);
     }
