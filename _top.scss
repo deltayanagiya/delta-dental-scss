@@ -296,9 +296,7 @@ G-navi
 Hero
 --------------*/
 
-/*------------
-Hero01
---------------*/
+/*- Hero01 -*/
 .hero01 {
   height: 100vh;
   overflow: hidden;
@@ -353,9 +351,7 @@ Hero01
   }
 }
 
-/*------------
-Hero02
---------------*/
+/*- Hero02 -*/
 .hero02 {
   height: 100vh;
   overflow: hidden;
@@ -429,9 +425,7 @@ Hero02
   }
 }
 
-/*------------
-Hero03
---------------*/
+/*- Hero03 -*/
 .hero03 {
   height: 100vh;
   overflow: hidden;
@@ -498,19 +492,7 @@ Hero03
   animation: slide-zoom 15s linear forwards;
 }
 
-@media all and (-ms-high-contrast: none) {
-
-  .slide-start.l,
-  .slide-start.r,
-  .slide-start.z {
-    -webkit-animation: none;
-    animation: none;
-  }
-}
-
-/*------------
-Hero04
---------------*/
+/*- Hero04 -*/
 .hero04 {
   height: 100vh;
   overflow: hidden;
@@ -565,19 +547,13 @@ Hero04
 
 }
 
-/*------------
-Hero05
---------------*/
-
 @media (max-width: 800px) {
 
   /*------------
 Hero
 --------------*/
 
-  /*------------
-Hero01
---------------*/
+  /*- Hero01 -*/
   .hero01 {
     height: auto;
 
@@ -608,9 +584,7 @@ Hero01
     }
   }
 
-  /*------------
-Hero02
---------------*/
+  /*- Hero02 -*/
   .hero02 {
     height: auto;
 
@@ -652,9 +626,7 @@ Hero02
     }
   }
 
-  /*------------
-Hero03
---------------*/
+  /*- Hero03 -*/
   .hero03 {
     height: auto;
 
@@ -676,9 +648,7 @@ Hero03
     }
   }
 
-  /*------------
-Hero04
---------------*/
+  /*- Hero04 -*/
   .hero04 {
     height: auto;
     margin-top: 0;
