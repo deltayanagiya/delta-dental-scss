@@ -296,6 +296,20 @@ G-navi
 Hero
 --------------*/
 
+.hero-catch {
+  font-family: $font01;
+
+  .ttl {
+    font-size: 65px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .txt {
+    font-size: 20px;
+  }
+}
+
 /*- Hero01 -*/
 .hero01 {
   height: 100vh;
@@ -327,27 +341,12 @@ Hero
     }
   }
 
-  .hero-ttl {
+  .hero-catch {
     position: absolute;
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
     z-index: 10;
-
-    .ttl {
-      font-family: $font01;
-      font-weight: bold;
-      font-size: 65px;
-      line-height: 1.4;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 0;
-    }
-
-    .txt {
-      font-family: $font01;
-      font-size: 20px;
-    }
   }
 }
 
@@ -389,39 +388,12 @@ Hero
     }
   }
 
-  .hero-ttl {
+  .hero-catch {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     z-index: 10;
-
-    .ttl {
-      font-family: $font01;
-      font-weight: bold;
-      font-size: 65px;
-      line-height: 1.4;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 0;
-    }
-
-    .txt {
-      font-family: $font01;
-      font-size: 20px;
-    }
-
-    .txt-en {
-      color: #efeeee;
-      font-family: $font02;
-      font-size: 65px;
-      line-height: 1.2;
-      letter-spacing: 0.15em;
-      position: absolute;
-      top: -100px;
-      left: -35px;
-      z-index: -1;
-    }
   }
 }
 
@@ -456,27 +428,12 @@ Hero
     }
   }
 
-  .hero-ttl {
+  .hero-catch {
     position: absolute;
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
     z-index: 10;
-
-    .ttl {
-      font-family: $font01;
-      font-weight: bold;
-      font-size: 65px;
-      line-height: 1.4;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 0;
-    }
-
-    .txt {
-      font-family: $font01;
-      font-size: 20px;
-    }
   }
 }
 
@@ -521,28 +478,13 @@ Hero
 
   }
 
-  .hero-ttl {
+  .hero-catch {
     color: #fff;
     position: absolute;
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
     z-index: 10;
-
-    .ttl {
-      font-family: $font01;
-      font-weight: bold;
-      font-size: 65px;
-      line-height: 1.4;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 0;
-    }
-
-    .txt {
-      font-family: $font01;
-      font-size: 20px;
-    }
   }
 
 }
@@ -552,6 +494,18 @@ Hero
   /*------------
 Hero
 --------------*/
+
+  .hero-catch {
+    .ttl {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .txt {
+      font-size: 13px;
+    }
+  }
 
   /*- Hero01 -*/
   .hero01 {
@@ -565,22 +519,12 @@ Hero
       }
     }
 
-    .hero-ttl {
+    .hero-catch {
       padding: 0 5vw;
       top: auto;
       bottom: 30px;
       left: 0;
       transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
     }
   }
 
@@ -601,28 +545,12 @@ Hero
       }
     }
 
-    .hero-ttl {
+    .hero-catch {
       padding: 0 5vw;
       top: auto;
       bottom: 30px;
       left: 0;
       transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
-
-      .txt-en {
-        font-size: 30px;
-        top: -30px;
-        left: 0;
-      }
     }
   }
 
@@ -630,21 +558,11 @@ Hero
   .hero03 {
     height: auto;
 
-    .hero-ttl {
+    .hero-catch {
       padding: 0 5vw;
       top: inherit;
       left: 0;
       transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
     }
   }
 
@@ -657,22 +575,12 @@ Hero
       height: 40vh;
     }
 
-    .hero-ttl {
+    .hero-catch {
       padding: 0 5vw;
       top: auto;
       bottom: 30px;
       left: 0;
       transform: translateY(0);
-
-      .ttl {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-
-      .txt {
-        font-size: 13px;
-      }
     }
   }
 }
