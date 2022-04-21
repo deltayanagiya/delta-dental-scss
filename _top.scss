@@ -1580,10 +1580,6 @@ main {
   }
 }
 
-.sec09 {
-  padding: 60px 0;
-}
-
 .list-top-news {
   font-size: 15px;
 
@@ -1616,6 +1612,19 @@ main {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.sec09 {
+  padding: 60px 0;
+}
+
+.bnr-fade {
+  display: inline-block;
+  transition: .5s;
+
+  &:hover {
+    opacity: .5;
   }
 }
 
@@ -2574,15 +2583,6 @@ Top contents
 
   .sec09 {
     padding: 50px 0;
-  }
-
-  .bnr-fade {
-    display: inline-block;
-    transition: .5s;
-
-    &:hover {
-      opacity: .5;
-    }
   }
 
   .map-layout {
