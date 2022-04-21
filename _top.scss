@@ -2576,6 +2576,15 @@ Top contents
     padding: 50px 0;
   }
 
+  .bnr-fade {
+    display: inline-block;
+    transition: .5s;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
   .map-layout {
     iframe {
       vertical-align: bottom;
