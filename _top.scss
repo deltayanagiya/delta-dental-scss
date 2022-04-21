@@ -1389,12 +1389,20 @@ main {
   padding: 70px 0;
 }
 
-.sec05-wrapper {
+.sec05-layout {
   display: flex;
   justify-content: space-between;
 
   >.item {
     width: 48%;
+
+    .item-ttl {
+      border-bottom: 2px solid #eee;
+      font-family: $font01;
+      font-size: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -2462,7 +2470,7 @@ Top contents
     padding: 50px 0;
   }
 
-  .sec05-wrapper {
+  .sec05-layout {
     display: block;
 
     >.item {
