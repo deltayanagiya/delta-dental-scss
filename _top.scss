@@ -352,7 +352,7 @@ Hero
 
 /*- Hero02 -*/
 .hero02 {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -399,7 +399,7 @@ Hero
 
 /*- Hero03 -*/
 .hero03 {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
 
@@ -454,10 +454,6 @@ Hero
   height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
-
-  &.no-margin-top {
-    margin-top: 0;
-  }
 
   .hero-bg {
     width: 100%;
