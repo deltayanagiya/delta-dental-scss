@@ -53,7 +53,7 @@ Under layout
 }
 
 .u-contents {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .u-contents {
@@ -112,7 +112,7 @@ Under parts
   font-family: $font01;
   font-size: 20px;
   padding-left: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
 
   &::before {
@@ -579,6 +579,10 @@ Under parts
     margin-top: auto;
   }
 
+  .u-btn {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 .list-card02 {
@@ -623,6 +627,11 @@ Under parts
   .list-btn {
     text-align: center;
     margin-top: auto;
+  }
+
+  .u-btn {
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -710,6 +719,11 @@ Under parts
   .list-btn {
     text-align: center;
     margin-top: auto;
+  }
+
+  .u-btn {
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -1077,6 +1091,7 @@ Under parts
   overflow: hidden;
 
   dt {
+    clear: both;
     color: #888;
     float: left;
     padding-bottom: 10px;
@@ -1224,7 +1239,7 @@ Under parts
   }
 
   .business-calendar {
-	  background: #FFFFFF;
+    background: #FFFFFF;
     text-align: center;
     border-collapse: collapse;
     border-spacing: 0;
