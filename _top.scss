@@ -451,11 +451,9 @@ Hero
 
 /*- Hero04 -*/
 .hero04 {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
-  position: relative;
-  margin-top: 100px;
 
   &.no-margin-top {
     margin-top: 0;
@@ -463,7 +461,6 @@ Hero
 
   .hero-bg {
     width: 100%;
-    height: calc(100vh - 100px);
 
     video {
       position: absolute;
@@ -789,11 +786,7 @@ Hero
   /*- Hero04 -*/
   .hero04 {
     height: auto;
-    margin-top: 0;
-
-    .hero-bg {
-      height: 40vh;
-    }
+    height: 40vh;
 
     .hero-catch {
       padding: 0 5vw;
