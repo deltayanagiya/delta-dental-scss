@@ -312,7 +312,7 @@ Hero
 
 /*- Hero01 -*/
 .hero01 {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
 
@@ -725,11 +725,7 @@ Hero
 
   /*- Hero01 -*/
   .hero01 {
-    height: auto;
-
-    .hero-bg {
-      height: 40vh;
-    }
+    height: 40vh;
 
     .hero-catch {
       padding: 0 5vw;
