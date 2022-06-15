@@ -6,6 +6,7 @@ Under layout
   background: $iro01;
   color: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -19,7 +20,6 @@ Under layout
   font-size: 45px;
   line-height: 1.2;
   letter-spacing: .1em;
-  margin-bottom: 25px;
 }
 
 .page-ttl-sub {
@@ -1369,7 +1369,6 @@ Under parts
 
   .page-ttl-main {
     font-size: 35px;
-    margin-bottom: 15px;
   }
 
   .page-ttl-sub {
