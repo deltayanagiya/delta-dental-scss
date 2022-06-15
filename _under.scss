@@ -11,24 +11,21 @@ Under layout
   text-align: center;
   height: 300px;
   width: 100%;
+}
 
-  h1 {
-    .txt01 {
-      display: block;
-      text-transform: uppercase;
-      font-family: $font02;
-      font-size: 45px;
-      line-height: 1.2;
-      letter-spacing: .1em;
-      margin-bottom: 25px;
-    }
+.page-ttl-main {
+  text-transform: uppercase;
+  font-family: $font02;
+  font-size: 45px;
+  line-height: 1.2;
+  letter-spacing: .1em;
+  margin-bottom: 25px;
+}
 
-    .txt02 {
-      display: block;
-      font-family: $font01;
-      font-size: 18px;
-    }
-  }
+.page-ttl-sub {
+  display: block;
+  font-family: $font01;
+  font-size: 18px;
 }
 
 .breadcrumb {
