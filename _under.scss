@@ -1365,17 +1365,15 @@ Under parts
   .page-ttl {
     padding: 0 5vw;
     height: 200px;
+  }
 
-    h1 {
-      .txt01 {
-        font-size: 35px;
-        margin-bottom: 15px;
-      }
+  .page-ttl-main {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
 
-      .txt02 {
-        font-size: 15px;
-      }
-    }
+  .page-ttl-sub {
+    font-size: 15px;
   }
 
   .breadcrumb {
