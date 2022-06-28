@@ -1,5 +1,10 @@
 @import "_variables.scss"; // 変数定義
 
+.header {
+  position: absolute;
+  top: 0;
+}
+
 .h-wrapper {
   padding: 15px 2.5vw;
 }
@@ -104,6 +109,10 @@ G-navi
   /*------------
 Header
 --------------*/
+
+  .header {
+    position: static;
+  }
 
   .h-contents {
     display: none;

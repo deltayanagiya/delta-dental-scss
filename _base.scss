@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  padding-top: 100px;
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -64,6 +65,7 @@ a[href^="tel"] {
 
 @media only screen and (max-width: 800px) {
   body {
+    padding-top: 0;
     font-size: 14px;
     line-height: 1.8;
   }
